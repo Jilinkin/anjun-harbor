@@ -45,6 +45,8 @@ on:
       - scripts/test_engine_preferences.py
       - scripts/engine_releases.py
       - scripts/test_engine_releases.py
+      - scripts/engine_rebase.py
+      - scripts/test_engine_rebase.py
       - engine/examples/**
       - open.json
       - open/**
