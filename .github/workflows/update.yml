@@ -39,6 +39,8 @@ on:
       - scripts/test_engine_html.py
       - scripts/engine_registry.py
       - scripts/test_engine_registry.py
+      - scripts/engine_dedupe.py
+      - scripts/test_engine_dedupe.py
       - engine/examples/**
       - open.json
       - open/**

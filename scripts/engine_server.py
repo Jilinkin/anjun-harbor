@@ -36,7 +36,10 @@ def main():
     mode.add_argument("--html-rules",type=Path)
     mode.add_argument("--mixed",type=Path)
     p.add_argument("--allow-network",action="store_true")
+    p.add_argument("--dedupe-selection",type=Path)
     a=p.parse_args()
+    if a.dedupe_selection and (not a.mixed or a.allow_network):
+        p.error("Deduplication requires a local mixed snapshot manifest without network mode")
     try:
         addr=ipaddress.IPv4Address(a.host)
         private=any(addr in ipaddress.IPv4Network(n) for n in ("10.0.0.0/8","172.16.0.0/12","192.168.0.0/16"))
@@ -71,6 +74,13 @@ def main():
         print(json.dumps(status,ensure_ascii=False),flush=True)
         if not catalog.records:
             p.error("No valid records from reviewed mixed providers")
+        if a.dedupe_selection:
+            if any(s["status"]!="ok" for s in status):
+                p.error("Incomplete catalog; repair failed providers")
+            from engine_dedupe import apply
+            from audit_dependencies import read_limited
+            catalog,history=apply(catalog,json.loads(read_limited(a.dedupe_selection).decode("utf-8-sig")))
+            print(json.dumps(history,ensure_ascii=False),flush=True)
     else:
         catalog=demo()
     base=f"http://{addr}:{a.port}"
