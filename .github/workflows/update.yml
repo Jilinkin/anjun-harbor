@@ -10,6 +10,8 @@ on:
       - legacy.json
       - scripts/build.py
       - scripts/test_build.py
+      - scripts/probe.py
+      - scripts/test_probe.py
       - .github/workflows/update.yml
 permissions:
   contents: write
@@ -33,7 +35,8 @@ jobs:
             git reset --hard origin/main
             python3 -m unittest discover -s scripts -p 'test_*.py'
             python3 scripts/build.py --publish
-            git add -A -- index.json warehouses
+            python3 scripts/probe.py
+            git add -A -- index.json warehouses health.json
             if git diff --cached --quiet; then
               exit 0
             fi
