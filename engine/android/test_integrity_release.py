@@ -15,6 +15,10 @@ class IntegrityTests(unittest.TestCase):
         self.assertTrue(direct["spider"].endswith(";md5;"+md5))
         self.assertIn("/"+"a"*40+"/",direct["spider"])
         self.assertEqual(json.loads(outputs["integrity.json"])["sha256"],sha)
+    def test_rc3_demo(self):
+        data=b"synthetic"
+        cfg=json.loads(generate(data,hashlib.sha256(data).hexdigest(),"rc3","a"*40)["config-cn-md5.json"])
+        self.assertEqual(cfg["sites"][0]["ext"],"harbor-rc3-demo")
     def test_wrong_sha(self):
         with self.assertRaises(ValueError):generate(b"bad","0"*64,"rc2","a"*40)
     def test_bad_version(self):

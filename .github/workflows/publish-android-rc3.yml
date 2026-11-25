@@ -1,0 +1,48 @@
+name: Build and publish RC3 static demo
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-android-rc3.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: static-rc3
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Regression and integrity tests
+        run: |
+          mvn -q org.apache.maven.plugins:maven-dependency-plugin:3.6.1:get -Dartifact=org.json:json:20240303
+          export HARBOR_JSON_JAR="$HOME/.m2/repository/org/json/json/20240303/json-20240303.jar"
+          bash engine/android/test.sh
+          cd engine/android
+          python3 -m unittest test_integrity_release.py
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
+          log-accepted-android-sdk-licenses: 'false'
+      - name: Build and verify DEX
+        run: bash engine/android/build.sh
+      - name: Publish binary and integrity configurations atomically
+        run: |
+          python3 engine/android/publish_rc3.py
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- android-demo/rc3
+          git commit -m 'Prepare RC3 demo binary'
+          REF=$(git rev-parse HEAD)
+          SHA=$(awk '{print $1}' engine/android/build/sha256.txt)
+          python3 engine/android/integrity_release.py --version rc3 --ref "$REF" --expected-sha256 "$SHA"
+          git add -- android-demo/rc3
+          git commit -m 'Add RC3 fixed-revision integrity hints'
+          git push origin HEAD:main
