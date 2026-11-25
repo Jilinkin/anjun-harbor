@@ -1,0 +1,5817 @@
+{
+  "version": 1,
+  "date": "2026-11-25",
+  "scope": "Static configuration relationships only; service host identifiers are anonymous and are not verified backend identities.",
+  "warehouses": [
+    {
+      "warehouse": "Harbor 01",
+      "total": 151,
+      "direct_api": 0,
+      "relative_or_script_ref": 35,
+      "crawler_class": 96,
+      "other": 20,
+      "explicit_ext_url": 1
+    },
+    {
+      "warehouse": "Harbor 02",
+      "total": 48,
+      "direct_api": 0,
+      "relative_or_script_ref": 8,
+      "crawler_class": 39,
+      "other": 1,
+      "explicit_ext_url": 3
+    },
+    {
+      "warehouse": "Harbor 03",
+      "total": 298,
+      "direct_api": 0,
+      "relative_or_script_ref": 227,
+      "crawler_class": 71,
+      "other": 0,
+      "explicit_ext_url": 3
+    },
+    {
+      "warehouse": "Harbor 04",
+      "total": 165,
+      "direct_api": 0,
+      "relative_or_script_ref": 130,
+      "crawler_class": 30,
+      "other": 5,
+      "explicit_ext_url": 29
+    },
+    {
+      "warehouse": "Harbor 05",
+      "total": 93,
+      "direct_api": 0,
+      "relative_or_script_ref": 11,
+      "crawler_class": 78,
+      "other": 4,
+      "explicit_ext_url": 9
+    }
+  ],
+  "total": 755,
+  "distinct_direct_api_hosts": 0,
+  "cross_warehouse_direct_api_host_groups": 0,
+  "distinct_direct_api_identities": 0,
+  "exact_api_repeat_groups": 0,
+  "distinct_crawler_class_labels": 119,
+  "cross_warehouse_crawler_class_groups": 18,
+  "host_groups": [],
+  "crawler_class_groups": [
+    {
+      "id": "class-001",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 2
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 3
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 4
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 5
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 7
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 8
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 9
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 10
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 11
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 12
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 13
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 14
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 15
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 16
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 17
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 18
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 19
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 20
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 21
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 22
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 23
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 24
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 25
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 26
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 27
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 28
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 29
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 30
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 31
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 32
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 33
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 34
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 35
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 36
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 37
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 38
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 39
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 40
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 41
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 42
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 43
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 44
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 45
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 46
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 47
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 48
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 49
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 50
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 51
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 52
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 53
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 54
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 55
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 56
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 57
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 78
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 79
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 80
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 81
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 82
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 83
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 84
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 85
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 86
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 87
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 88
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 89
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 90
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 91
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 92
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 93
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 94
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 95
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 96
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 97
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 98
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 99
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 100
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 101
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 102
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 103
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 104
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 105
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 106
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 107
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 108
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 109
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 110
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 111
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 112
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 113
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 114
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 115
+        },
+        {
+          "warehouse": "Harbor 01",
+          "position": 116
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 104
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 159
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 160
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 161
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 162
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 163
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-002",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 132
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 111
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 131
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-003",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 151
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 180
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 165
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 70
+        }
+      ],
+      "warehouse_count": 4
+    },
+    {
+      "id": "class-004",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 1
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-005",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 7
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-006",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 8
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-007",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 9
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-008",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 10
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-009",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 11
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-010",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 12
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-011",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 13
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-012",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 14
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 127
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 33
+        }
+      ],
+      "warehouse_count": 3
+    },
+    {
+      "id": "class-013",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 15
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-014",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 16
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 135
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-015",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 17
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 18
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 19
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 20
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 21
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 22
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 49
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 50
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 51
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 52
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 53
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 54
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 55
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 56
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 57
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 58
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-016",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 24
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 25
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 26
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 27
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 28
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 29
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 30
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 31
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 32
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 33
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 34
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 35
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 36
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 37
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 38
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 39
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 40
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 41
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 42
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 46
+        },
+        {
+          "warehouse": "Harbor 02",
+          "position": 47
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 139
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 63
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 64
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 65
+        }
+      ],
+      "warehouse_count": 3
+    },
+    {
+      "id": "class-017",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 48
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-018",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 7
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 1
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-019",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 8
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-020",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 9
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-021",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 10
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 138
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 71
+        }
+      ],
+      "warehouse_count": 3
+    },
+    {
+      "id": "class-022",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 11
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 3
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-023",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 12
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-024",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 13
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-025",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 14
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-026",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 15
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 23
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-027",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 16
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 6
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-028",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 17
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-029",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 18
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 19
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-030",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 20
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 88
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-031",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 21
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-032",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 22
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-033",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 24
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-034",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 25
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-035",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 26
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-036",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 27
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-037",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 28
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-038",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 29
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 9
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-039",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 30
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 31
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 32
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 33
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 34
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 35
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-040",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 36
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-041",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 37
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-042",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 38
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-043",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 39
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-044",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 40
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-045",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 41
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-046",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 42
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 7
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-047",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 43
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-048",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 44
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-049",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 45
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-050",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 46
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-051",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 47
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-052",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 48
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-053",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 49
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-054",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 50
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-055",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 51
+        },
+        {
+          "warehouse": "Harbor 03",
+          "position": 52
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-056",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 53
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-057",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 54
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-058",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 55
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-059",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 56
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-060",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 57
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-061",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 58
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-062",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 59
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-063",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 60
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 19
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-064",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 61
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-065",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 62
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-066",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 63
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-067",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 64
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-068",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 65
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-069",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 66
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-070",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 67
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-071",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 68
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-072",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 69
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-073",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 70
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-074",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 71
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 85
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 86
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 87
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 88
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 89
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 90
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 91
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 92
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 93
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-075",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 72
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-076",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 73
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-077",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 74
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-078",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 179
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-079",
+      "members": [
+        {
+          "warehouse": "Harbor 03",
+          "position": 296
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 84
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-080",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 1
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 72
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "class-081",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 89
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-082",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 90
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-083",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 130
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-084",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 143
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-085",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 149
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 150
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 151
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 152
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 153
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 154
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 155
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 156
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 157
+        },
+        {
+          "warehouse": "Harbor 04",
+          "position": 158
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-086",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 2
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-087",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 3
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-088",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 8
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-089",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 10
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 11
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 12
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 13
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 14
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 15
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 16
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 17
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 18
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-090",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 20
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-091",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 21
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-092",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 22
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-093",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 23
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-094",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 24
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-095",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 25
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-096",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 26
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-097",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 34
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 35
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 66
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 67
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 68
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-098",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 40
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-099",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 41
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-100",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 44
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-101",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 45
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-102",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 46
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-103",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 48
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-104",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 59
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-105",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 60
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-106",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 61
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-107",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 62
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-108",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 69
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-109",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 73
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-110",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 74
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-111",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 75
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-112",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 76
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-113",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 77
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-114",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 78
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-115",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 79
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-116",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 80
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-117",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 81
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-118",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 82
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "class-119",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 83
+        }
+      ],
+      "warehouse_count": 1
+    }
+  ],
+  "exact_api_repeat_members": [],
+  "entries": [
+    {
+      "warehouse": "Harbor 01",
+      "position": 1,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 2,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 3,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 4,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 5,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 6,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 7,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 8,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 9,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 10,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 11,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 12,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 13,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 14,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 15,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 16,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 17,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 18,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 19,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 20,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 21,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 22,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 23,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 24,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 25,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 26,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 27,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 28,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 29,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 30,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 31,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 32,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 33,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 34,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 35,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 36,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 37,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 38,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 39,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 40,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 41,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 42,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 43,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 44,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 45,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 46,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 47,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 48,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 49,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 50,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 51,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 52,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 53,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 54,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 55,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 56,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 57,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 58,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 59,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 60,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 61,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 62,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 63,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 64,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 65,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 66,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 67,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 68,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 69,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 70,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 71,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 72,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 73,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 74,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 75,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 76,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 77,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 78,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 79,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 80,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 81,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 82,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 83,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 84,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 85,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 86,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 87,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 88,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 89,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 90,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 91,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 92,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 93,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 94,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 95,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 96,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 97,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 98,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 99,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 100,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 101,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 102,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 103,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 104,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 105,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 106,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 107,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 108,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 109,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 110,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 111,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 112,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 113,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 114,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 115,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 116,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 117,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 118,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 119,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 120,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 121,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 122,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 123,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 124,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 125,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 126,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 127,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 128,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 129,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 130,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 131,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 132,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 133,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 134,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 135,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 136,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 137,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 138,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 139,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 140,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 141,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 142,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 143,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 144,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 145,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 146,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 147,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 148,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 149,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 150,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 01",
+      "position": 151,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 1,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 2,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 3,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 4,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 5,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 6,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 7,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 8,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 9,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 10,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 11,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 12,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 13,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 14,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 15,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 16,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 17,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 18,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 19,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 20,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 21,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 22,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 23,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 24,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 25,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 26,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 27,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 28,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 29,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 30,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 31,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 32,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 33,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 34,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 35,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 36,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 37,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 38,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 39,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 40,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 41,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 42,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 43,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 44,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 45,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 46,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 47,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 02",
+      "position": 48,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 1,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 2,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 3,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 4,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 5,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 6,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 7,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 8,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 9,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 10,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 11,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 12,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 13,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 14,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 15,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 16,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 17,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 18,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 19,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 20,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 21,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 22,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 23,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 24,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 25,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 26,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 27,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 28,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 29,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 30,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 31,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 32,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 33,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 34,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 35,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 36,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 37,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 38,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 39,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 40,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 41,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 42,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 43,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 44,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 45,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 46,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 47,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 48,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 49,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 50,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 51,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 52,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 53,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 54,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 55,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 56,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 57,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 58,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 59,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 60,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 61,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 62,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 63,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 64,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 65,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 66,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 67,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 68,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 69,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 70,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 71,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 72,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 73,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 74,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 75,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 76,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 77,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 78,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 79,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 80,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 81,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 82,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 83,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 84,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 85,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 86,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 87,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 88,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 89,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 90,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 91,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 92,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 93,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 94,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 95,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 96,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 97,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 98,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 99,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 100,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 101,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 102,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 103,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 104,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 105,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 106,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 107,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 108,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 109,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 110,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 111,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 112,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 113,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 114,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 115,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 116,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 117,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 118,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 119,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 120,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 121,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 122,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 123,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 124,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 125,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 126,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 127,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 128,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 129,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 130,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 131,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 132,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 133,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 134,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 135,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 136,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 137,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 138,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 139,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 140,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 141,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 142,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 143,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 144,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 145,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 146,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 147,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 148,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 149,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 150,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 151,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 152,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 153,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 154,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 155,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 156,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 157,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 158,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 159,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 160,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 161,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 162,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 163,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 164,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 165,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 166,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 167,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 168,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 169,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 170,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 171,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 172,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 173,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 174,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 175,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 176,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 177,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 178,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 179,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 180,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 181,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 182,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 183,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 184,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 185,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 186,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 187,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 188,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 189,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 190,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 191,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 192,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 193,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 194,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 195,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 196,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 197,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 198,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 199,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 200,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 201,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 202,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 203,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 204,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 205,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 206,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 207,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 208,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 209,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 210,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 211,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 212,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 213,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 214,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 215,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 216,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 217,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 218,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 219,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 220,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 221,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 222,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 223,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 224,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 225,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 226,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 227,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 228,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 229,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 230,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 231,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 232,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 233,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 234,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 235,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 236,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 237,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 238,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 239,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 240,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 241,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 242,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 243,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 244,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 245,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 246,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 247,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 248,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 249,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 250,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 251,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 252,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 253,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 254,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 255,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 256,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 257,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 258,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 259,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 260,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 261,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 262,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 263,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 264,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 265,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 266,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 267,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 268,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 269,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 270,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 271,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 272,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 273,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 274,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 275,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 276,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 277,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 278,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 279,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 280,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 281,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 282,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 283,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 284,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 285,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 286,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 287,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 288,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 289,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 290,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 291,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 292,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 293,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 294,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 295,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 296,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 297,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 03",
+      "position": 298,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 1,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 2,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 3,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 4,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 5,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 6,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 7,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 8,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 9,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 10,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 11,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 12,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 13,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 14,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 15,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 16,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 17,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 18,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 19,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 20,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 21,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 22,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 23,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 24,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 25,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 26,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 27,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 28,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 29,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 30,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 31,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 32,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 33,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 34,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 35,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 36,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 37,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 38,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 39,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 40,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 41,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 42,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 43,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 44,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 45,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 46,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 47,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 48,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 49,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 50,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 51,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 52,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 53,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 54,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 55,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 56,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 57,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 58,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 59,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 60,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 61,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 62,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 63,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 64,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 65,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 66,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 67,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 68,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 69,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 70,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 71,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 72,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 73,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 74,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 75,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 76,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 77,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 78,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 79,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 80,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 81,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 82,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 83,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 84,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 85,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 86,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 87,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 88,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 89,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 90,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 91,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 92,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 93,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 94,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 95,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 96,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 97,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 98,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 99,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 100,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 101,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 102,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 103,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 104,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 105,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 106,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 107,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 108,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 109,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 110,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 111,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 112,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 113,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 114,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 115,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 116,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 117,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 118,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 119,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 120,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 121,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 122,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 123,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 124,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 125,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 126,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 127,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 128,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 129,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 130,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 131,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 132,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 133,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 134,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 135,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 136,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 137,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 138,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 139,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 140,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 141,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 142,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 143,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 144,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 145,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 146,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 147,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 148,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 149,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 150,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 151,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 152,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 153,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 154,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 155,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 156,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 157,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 158,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 159,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 160,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 161,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 162,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 163,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 164,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 04",
+      "position": 165,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 1,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 2,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 3,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 4,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 5,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 6,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 7,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 8,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 9,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 10,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 11,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 12,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 13,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 14,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 15,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 16,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 17,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 18,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 19,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 20,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 21,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 22,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 23,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 24,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 25,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 26,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 27,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 28,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 29,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 30,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 31,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 32,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 33,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 34,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 35,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 36,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 37,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 38,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 39,
+      "kind": "other"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 40,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 41,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 42,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 43,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 44,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 45,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 46,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 47,
+      "kind": "relative_or_script_ref"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 48,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 49,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 50,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 51,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 52,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 53,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 54,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 55,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 56,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 57,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 58,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 59,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 60,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 61,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 62,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 63,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 64,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 65,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 66,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 67,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 68,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 69,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 70,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 71,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 72,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 73,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 74,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 75,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 76,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 77,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 78,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 79,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 80,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 81,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 82,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 83,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 84,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 85,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 86,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 87,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 88,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 89,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 90,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 91,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 92,
+      "kind": "crawler_class"
+    },
+    {
+      "warehouse": "Harbor 05",
+      "position": 93,
+      "kind": "crawler_class"
+    }
+  ],
+  "notes": [
+    "Position is one-based in retrieved snapshot; not stable across updates.",
+    "Shared hostname is a review hint, not proof of common content.",
+    "Class names identify an implementation label, not a backend or equivalent executable.",
+    "Script and ext URLs can refer to code, settings, or services. No external dependency downloaded or executed.",
+    "No source URLs, class names, tokens, or credentials included in this report. No playback or authorization verification."
+  ]
+}
