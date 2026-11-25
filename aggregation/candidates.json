@@ -99,28 +99,28 @@
       "name": "T4",
       "url": "https://gitee.com/free-kingdom/dc/raw/main/T4.json",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "http_451",
       "review": "pending"
     },
     {
       "name": "南风",
       "url": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
       "declared_kind": "single",
-      "status": "parse_failed",
+      "status": "parse_failed_extra_content",
       "review": "pending"
     },
     {
       "name": "菜妮丝",
       "url": "https://tv.菜妮丝.top",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "html_in_current_environment",
       "review": "pending"
     },
     {
       "name": "HG",
       "url": "https://api.hgyx.vip/hgyx.json",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "http_444",
       "review": "pending"
     },
     {
@@ -134,21 +134,21 @@
       "name": "小盒子",
       "url": "http://xhztv.top/xhz",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "gateway_error",
       "review": "pending"
     },
     {
       "name": "小盒子4K",
       "url": "http://xhztv.top/4k.json",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "gateway_error",
       "review": "pending"
     },
     {
       "name": "潇洒",
       "url": "https://9877.kstore.space/ONE/one.json",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "gateway_error",
       "review": "pending"
     },
     {
@@ -165,14 +165,14 @@
       "name": "小苹果",
       "url": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "http_404",
       "review": "pending"
     },
     {
       "name": "宝盒VIP",
       "url": "https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json",
       "declared_kind": "single",
-      "status": "parse_failed",
+      "status": "parse_failed_unquoted_value",
       "review": "pending"
     },
     {
@@ -186,21 +186,21 @@
       "name": "真心",
       "url": "https://www.252035.xyz/z/FongMi.json",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "json_seen_partial_sensitive_fields",
       "review": "pending"
     },
     {
       "name": "喵影视",
       "url": "http://www.meowtv.vip/tvbox.json",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "gateway_error",
       "review": "pending"
     },
     {
       "name": "驸马",
       "url": "http://fmys.top/fmys.json",
       "declared_kind": "single",
-      "status": "not_checked",
+      "status": "gateway_error",
       "review": "pending"
     },
     {

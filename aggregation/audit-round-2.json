@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "date": "2026-11-25",
+  "scope": "Read-only audit of five complete configurations, additional availability checks; no playback or authorization verification.",
+  "complete_warehouses": [
+    {
+      "name": "YW",
+      "sites": 151,
+      "exact_repeat": 0,
+      "independent_api_records": 20
+    },
+    {
+      "name": "香雅情",
+      "sites": 48,
+      "exact_repeat": 0,
+      "independent_api_records": 1
+    },
+    {
+      "name": "高天流云",
+      "sites": 298,
+      "exact_repeat": 1,
+      "independent_api_records": 0
+    },
+    {
+      "name": "分享",
+      "sites": 165,
+      "exact_repeat": 0,
+      "independent_api_records": 5
+    },
+    {
+      "name": "东篱线路",
+      "sites": 93,
+      "exact_repeat": 0,
+      "independent_api_records": 4
+    }
+  ],
+  "total_sites": 755,
+  "exact_record_repeat_groups": 1,
+  "exact_record_excess": 1,
+  "exact_same_context_repeat_groups": 1,
+  "same_independent_api_groups": 1,
+  "same_independent_api_excess": 1,
+  "same_key_groups": 39,
+  "same_key_excess": 46,
+  "findings": [
+    {
+      "kind": "exact_record_same_warehouse",
+      "warehouse": "高天流云",
+      "positions_1_based": [
+        125,
+        253
+      ],
+      "note": "Identical serialized records in this snapshot only. Recheck if upstream changes."
+    },
+    {
+      "kind": "same_type_and_absolute_api",
+      "entries": [
+        {
+          "warehouse": "YW",
+          "position_1_based": 58
+        },
+        {
+          "warehouse": "东篱线路",
+          "position_1_based": 38
+        }
+      ],
+      "note": "Review differing site and global settings before removal."
+    }
+  ],
+  "unresolved_multi": {
+    "游魂多仓": "redirect_not_readable",
+    "游魂多仓（备）": "redirect_not_readable",
+    "潇洒 AnotherDS": "404",
+    "小盒子多仓": "502",
+    "小盒子多仓（备）": "502",
+    "拾光多仓": "403"
+  },
+  "additional_checks": {
+    "南风": "parse_failed_extra_content",
+    "宝盒VIP": "parse_failed_unquoted_value",
+    "菜妮丝": "html_in_current_environment",
+    "T4": "http_451",
+    "HG": "http_444",
+    "小盒子": "gateway_error",
+    "小盒子4K": "gateway_error",
+    "潇洒": "gateway_error",
+    "小苹果": "http_404",
+    "真心": "json_seen_partial_sensitive_fields",
+    "喵影视": "gateway_error",
+    "驸马": "gateway_error"
+  },
+  "notes": [
+    "Same key does not establish equivalence. Counts overlap and cannot be added as removals.",
+    "No complete configuration or credential values copied into the repository.",
+    "No production changes. Source access failures are specific to current retrieval environment, not proof that the TV client will fail."
+  ]
+}
