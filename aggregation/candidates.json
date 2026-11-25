@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "name": "YW",
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json",
+      "declared_kind": "single",
+      "status": "parsed",
+      "sites": 151,
+      "type01": 20,
+      "live_entries": 1,
+      "review": "pending"
+    },
+    {
+      "name": "饭太硬",
+      "url": "http://www.饭太硬.net/tv",
+      "declared_kind": "single",
+      "status": "html_in_current_environment",
+      "review": "pending"
+    },
+    {
+      "name": "肥猫",
+      "url": "http://肥猫.net",
+      "declared_kind": "single",
+      "status": "timeout",
+      "review": "pending"
+    },
+    {
+      "name": "摸鱼儿",
+      "url": "http://我不是.摸鱼儿.top",
+      "declared_kind": "single",
+      "status": "html_in_current_environment",
+      "review": "pending"
+    },
+    {
+      "name": "王二小放牛娃",
+      "url": "http://tvbox.王二小放牛娃.top",
+      "declared_kind": "single",
+      "status": "timeout",
+      "review": "pending"
+    },
+    {
+      "name": "王二小放牛娃新接口",
+      "url": "https://9280.kstore.vip/newwex.json",
+      "declared_kind": "single",
+      "status": "json_seen_partial",
+      "review": "pending"
+    },
+    {
+      "name": "哈基米",
+      "url": "https://17264.kstore.space/哈基米.png",
+      "declared_kind": "single",
+      "status": "fetch_failed",
+      "review": "pending"
+    },
+    {
+      "name": "动漫城",
+      "url": "https://www.yingm.cc/dm/dm.json",
+      "declared_kind": "single",
+      "status": "json_seen_partial",
+      "review": "pending"
+    },
+    {
+      "name": "俊佬",
+      "url": "http://home.jundie.top:81/top98.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "巧记",
+      "url": "http://cdn.qiaoji8.com/tvbox.json",
+      "declared_kind": "single",
+      "status": "gateway_error",
+      "review": "pending"
+    },
+    {
+      "name": "OK影视内部",
+      "url": "http://ok213.top/tv",
+      "declared_kind": "single",
+      "status": "user_reported_unavailable",
+      "review": "pending"
+    },
+    {
+      "name": "OK影视公开",
+      "url": "http://ok213.top/ok",
+      "declared_kind": "single",
+      "status": "user_reported_unavailable",
+      "review": "pending"
+    },
+    {
+      "name": "道长",
+      "url": "https://cdn.gitmirror.com/bb/xduo/libs/master/index.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "T4",
+      "url": "https://gitee.com/free-kingdom/dc/raw/main/T4.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "南风",
+      "url": "https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json",
+      "declared_kind": "single",
+      "status": "parse_failed",
+      "review": "pending"
+    },
+    {
+      "name": "菜妮丝",
+      "url": "https://tv.菜妮丝.top",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "HG",
+      "url": "https://api.hgyx.vip/hgyx.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "dxawi",
+      "url": "https://dxawi.github.io/0/0.json",
+      "declared_kind": "single",
+      "status": "json_seen_partial",
+      "review": "pending"
+    },
+    {
+      "name": "小盒子",
+      "url": "http://xhztv.top/xhz",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "小盒子4K",
+      "url": "http://xhztv.top/4k.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "潇洒",
+      "url": "https://9877.kstore.space/ONE/one.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "香雅情",
+      "url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+      "declared_kind": "single",
+      "status": "parsed",
+      "sites": 48,
+      "type01": 1,
+      "live_entries": 3,
+      "review": "pending"
+    },
+    {
+      "name": "小苹果",
+      "url": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "宝盒VIP",
+      "url": "https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json",
+      "declared_kind": "single",
+      "status": "parse_failed",
+      "review": "pending"
+    },
+    {
+      "name": "欧歌",
+      "url": "https://xn--anna-wn6lw489o.v.nxog.top/m/",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "真心",
+      "url": "https://www.252035.xyz/z/FongMi.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "喵影视",
+      "url": "http://www.meowtv.vip/tvbox.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "驸马",
+      "url": "http://fmys.top/fmys.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "高天流云",
+      "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "declared_kind": "single",
+      "status": "parsed",
+      "sites": 298,
+      "type01": 0,
+      "live_entries": 2,
+      "review": "pending"
+    },
+    {
+      "name": "分享",
+      "url": "https://raw.githubusercontent.com/maoystv/6/main/000.json",
+      "declared_kind": "single",
+      "status": "parsed",
+      "sites": 165,
+      "type01": 5,
+      "live_entries": 10,
+      "review": "pending"
+    },
+    {
+      "name": "短剧",
+      "url": "https://cnb.cool/fish2018/duanju/-/git/raw/main/tvbox.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "东篱线路",
+      "url": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+      "declared_kind": "single",
+      "status": "parsed",
+      "sites": 93,
+      "type01": 4,
+      "live_entries": 12,
+      "review": "pending"
+    },
+    {
+      "name": "嗷呜线路",
+      "url": "https://cnb.cool/aooooowuuuuu/FreeSpider/-/git/raw/main/config",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "L佬线路",
+      "url": "https://android.lushunming.qzz.io/json/index.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "天神IY",
+      "url": "https://gitee.com/cpu-iy/iy/raw/master/%E5%A4%A9%E7%A5%9EIY.json",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "苹果CMS资源站",
+      "url": "https://pastebin.com/raw/gtbKvnE1",
+      "declared_kind": "single",
+      "status": "not_checked",
+      "review": "pending"
+    },
+    {
+      "name": "游魂多仓",
+      "url": "https://www.iyouhun.com/tv/dc",
+      "declared_kind": "multi",
+      "status": "redirect_unreadable",
+      "review": "pending"
+    },
+    {
+      "name": "游魂多仓（备）",
+      "url": "https://www.iyouhun.com/tv/yh",
+      "declared_kind": "multi",
+      "status": "redirect_unreadable",
+      "review": "pending"
+    },
+    {
+      "name": "潇洒 AnotherDS",
+      "url": "https://9877.kstore.space/AnotherDS/api.json",
+      "declared_kind": "multi",
+      "status": "http_404",
+      "review": "pending"
+    },
+    {
+      "name": "小盒子多仓",
+      "url": "http://xhztv.top/dc/",
+      "declared_kind": "multi",
+      "status": "gateway_error",
+      "review": "pending"
+    },
+    {
+      "name": "小盒子多仓（备）",
+      "url": "http://xhztv.top/DC.txt",
+      "declared_kind": "multi",
+      "status": "gateway_error",
+      "review": "pending"
+    },
+    {
+      "name": "拾光多仓",
+      "url": "http://xmbjm.fh4u.org/dc.txt",
+      "declared_kind": "multi",
+      "status": "http_403",
+      "review": "pending"
+    }
+  ]
+}

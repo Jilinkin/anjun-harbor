@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-25",
+  "scope": "Partial inventory only. No playback, dependency security, or rights verification.",
+  "candidate_count": 42,
+  "fully_parsed": 5,
+  "sites_before_dedup": 755,
+  "independent_type01_before_dedup": 30,
+  "full_config_equal_pairs": 0,
+  "pairwise_comparison": [
+    {
+      "a": "YW",
+      "b": "香雅情",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 5
+    },
+    {
+      "a": "YW",
+      "b": "高天流云",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 24
+    },
+    {
+      "a": "YW",
+      "b": "分享",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 2
+    },
+    {
+      "a": "YW",
+      "b": "东篱线路",
+      "exact_type01_api_overlap": 1,
+      "same_key_candidates": 1
+    },
+    {
+      "a": "香雅情",
+      "b": "高天流云",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 6
+    },
+    {
+      "a": "香雅情",
+      "b": "分享",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 3
+    },
+    {
+      "a": "香雅情",
+      "b": "东篱线路",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 4
+    },
+    {
+      "a": "高天流云",
+      "b": "分享",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 2
+    },
+    {
+      "a": "高天流云",
+      "b": "东篱线路",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 2
+    },
+    {
+      "a": "分享",
+      "b": "东篱线路",
+      "exact_type01_api_overlap": 0,
+      "same_key_candidates": 6
+    }
+  ],
+  "notes": [
+    "The six declared multi-repository URLs could not be expanded in this environment.",
+    "Only exact API strings with the same type were compared; matching keys are not proof of equivalence.",
+    "All five fully parsed configurations include live entries. No content or scripts were copied. No production index change."
+  ]
+}
