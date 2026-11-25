@@ -33,6 +33,7 @@ def main():
     mode=p.add_mutually_exclusive_group()
     mode.add_argument("--providers",type=Path)
     mode.add_argument("--rules",type=Path)
+    mode.add_argument("--html-rules",type=Path)
     p.add_argument("--allow-network",action="store_true")
     a=p.parse_args()
     try:
@@ -57,6 +58,12 @@ def main():
         print(json.dumps(status,ensure_ascii=False),flush=True)
         if not catalog.records:
             p.error("No valid records from reviewed snapshots")
+    elif a.html_rules:
+        from engine_html import load_html
+        catalog,status=load_html(a.html_rules)
+        print(json.dumps(status,ensure_ascii=False),flush=True)
+        if not catalog.records:
+            p.error("No valid records from reviewed HTML snapshots")
     else:
         catalog=demo()
     base=f"http://{addr}:{a.port}"
