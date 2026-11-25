@@ -19,10 +19,10 @@ button.primary{background:#32677e;color:white;border-color:#32677e}pre{white-spa
 
 :root{color-scheme:light dark;font:15px system-ui,sans-serif}body{max-width:960px;margin:32px auto;padding:0 20px}h1{letter-spacing:-.04em}section{border:1px solid #8885;border-radius:12px;padding:16px;margin:16px 0}button,input,select{font:inherit;padding:8px;margin:4px;border-radius:6px;border:1px solid #8888}button{cursor:pointer}label{display:block}small{opacity:.8}article{border-top:1px solid #8885;padding:10px 0;overflow-wrap:anywhere}#msg{white-space:pre-wrap}input[type=text],input[type=url]{max-width:95%;width:350px}
 </style>
-<div class="shell"><aside class="sidebar"><div class="brand">Anjun Harbor<small>MANAGER · 0.6</small></div><nav aria-label="管理导航"><button data-page="overview" aria-current="page">概览</button><button data-page="import">导入中心</button><button data-page="library">接口库</button><button data-page="quality">质量检测</button><button data-page="dependencies">依赖审核</button><button data-page="changes">变更审核</button><button data-page="publish">发布中心</button></nav></aside><main class="main"><header class="topbar"><div><h1 id="pageTitle">概览</h1><span class="muted">离线管理 · 审核后发布</span></div><div><button id="saveDraft">保存本地草稿</button><button id="restoreDraft">恢复草稿</button></div></header><p id="msg" role="status" aria-live="polite"></p><section data-panel="overview"><h2>资源概览</h2><div class="metrics" id="metrics"></div><h3>仓库分布</h3><div id="groupSummary"></div><p class="muted">本页显示当前编辑目录，不代表线上订阅已发布。</p><button data-go="import" class="primary">导入配置</button><button data-go="publish">发布预览</button></section>
+<div class="shell"><aside class="sidebar"><div class="brand">Anjun Harbor<small>MANAGER · 0.7</small></div><nav aria-label="管理导航"><button data-page="overview" aria-current="page">概览</button><button data-page="import">导入中心</button><button data-page="library">接口库</button><button data-page="quality">质量检测</button><button data-page="dependencies">依赖审核</button><button data-page="changes">变更审核</button><button data-page="publish">发布中心</button></nav></aside><main class="main"><header class="topbar"><div><h1 id="pageTitle">概览</h1><span class="muted">离线管理 · 审核后发布</span></div><div><button id="saveDraft">保存本地草稿</button><button id="restoreDraft">恢复草稿</button></div></header><p id="msg" role="status" aria-live="polite"></p><section data-panel="overview"><h2>资源概览</h2><div class="metrics" id="metrics"></div><h3>仓库分布</h3><div id="groupSummary"></div><p class="muted">本页显示当前编辑目录，不代表线上订阅已发布。</p><button data-go="import" class="primary">导入配置</button><button data-go="publish">发布预览</button></section>
 <section data-panel="import" hidden><h2>加载目录或候选配置</h2><input id="file" type="file" accept=".json,application/json"><p>加载 catalog.json 可恢复目录；加载普通严格 JSON 的 sites 配置可预览候选。仅显示 type 0/1 的 HTTPS 独立接口，不执行任何第三方代码。</p><div id="candidates"></div></section>
 <section data-panel="library" hidden><h2>添加与审核接口</h2><label>仓库<select id="group"></select></label><label>显示名称<input id="name" type="text"></label><label>API<input id="api" type="url" placeholder="https://example.com/vod"></label><label>类型<select id="type"><option value="1">1 · JSON</option><option value="0">0 · XML</option></select></label><label>授权依据（公开说明，不含密钥）<input id="auth" type="text"></label><label><input id="approved" type="checkbox">已确认有权使用及公开此接口，且不依赖额外脚本</label><label><input id="probe" type="checkbox">允许每日进行公开元数据检测（不播放）</label><button id="add">添加到仓库</button></section>
-<section data-panel="changes" hidden><h2>上游变更审核</h2><p>导入两个已授权的本地配置快照进行比较。只显示变更，不自动应用到仓库。</p><label>旧配置 <input id="oldSnapshot" type="file" accept=".json,application/json"></label><label>新配置 <input id="newSnapshot" type="file" accept=".json,application/json"></label><button id="compare">比较版本</button><label>或导入 CLI 差异报告 <input id="diffReport" type="file" accept=".json,application/json"></label><div id="diffList"></div></section><section data-panel="dependencies" hidden><h2>依赖审核报告</h2><p>导入本地静态审计生成的 JSON 报告。仅查看，不执行、不发布依赖。</p><input id="deps" type="file" accept=".json,application/json"><div id="depList"></div></section><section data-panel="quality" hidden><h2>质量检测</h2><p>加载检测报告 health.json：<input id="health" type="file" accept=".json,application/json"></p><div id="qualitySummary"></div><div id="qualityList"></div></section><section data-panel="library" hidden><h2>自主仓库与接口</h2><label>搜索 <input id="search" type="text" placeholder="接口名称或地址"></label><label>状态 <select id="filter"><option value="all">全部</option><option value="approved">已审核启用</option><option value="disabled">停用 / 待审核</option></select></label><div id="list"></div></section><section data-panel="publish" hidden><h2>发布预览</h2><p>校验当前草稿，预览生成的独立点播配置；不会自动写入 GitHub。</p><button id="preview">生成预览</button><button id="export" class="primary">导出 catalog.json</button><div id="previewSummary"></div><pre id="previewJson">尚未生成</pre><p>导出后替换 GitHub 上的 catalog.json，由 Actions 生成发布。无独立仓库时，原订阅仍作为回退。</p></section></main></div>
+<section data-panel="changes" hidden><h2>上游变更审核</h2><p>导入两个已授权的本地配置快照进行比较。只显示变更，不自动应用到仓库。</p><label>旧配置 <input id="oldSnapshot" type="file" accept=".json,application/json"></label><label>新配置 <input id="newSnapshot" type="file" accept=".json,application/json"></label><button id="compare">比较版本</button><label>或导入 CLI 差异报告 <input id="diffReport" type="file" accept=".json,application/json"></label><div id="diffList"></div></section><section data-panel="dependencies" hidden><h2>依赖审核报告</h2><p>导入本地静态审计生成的 JSON 报告。仅查看，不执行、不发布依赖。</p><input id="deps" type="file" accept=".json,application/json"><div id="depList"></div></section><section data-panel="quality" hidden><h2>质量检测</h2><p>加载检测报告 health.json：<input id="health" type="file" accept=".json,application/json"></p><div id="qualitySummary"></div><div id="qualityList"></div><h3>质量辅助编排</h3><p class="muted">仅使用七日内、与当前接口匹配的元数据报告。锁定及停用接口保持原位；不自动删除或停用任何接口。</p><button id="organizePreview">生成编排建议</button><button id="organizeApply" disabled>应用到本地草稿</button><div id="organizeList"></div></section><section data-panel="library" hidden><h2>自主仓库与接口</h2><label>搜索 <input id="search" type="text" placeholder="接口名称或地址"></label><label>状态 <select id="filter"><option value="all">全部</option><option value="approved">已审核启用</option><option value="disabled">停用 / 待审核</option></select></label><div id="list"></div></section><section data-panel="publish" hidden><h2>发布预览</h2><p>校验当前草稿，预览生成的独立点播配置；不会自动写入 GitHub。</p><button id="preview">生成预览</button><button id="export" class="primary">导出 catalog.json</button><div id="previewSummary"></div><pre id="previewJson">尚未生成</pre><p>导出后替换 GitHub 上的 catalog.json，由 Actions 生成发布。无独立仓库时，原订阅仍作为回退。</p></section></main></div>
 <script>
 const $=id=>document.getElementById(id);
 let data={
@@ -60,7 +60,49 @@ let data={
     }
   ]
 };
-let health=[];
+let health=[];let healthReport={checks:[],checked_at:null};let pendingPlan=null;
+// BEGIN ORGANIZER ENGINE
+function assessment(group,site,report,now=Date.now()){
+ if(site.approved!==true)return {tier:'disabled',score:null};
+ const age=now-Date.parse(report?.checked_at);
+ if(!Number.isFinite(age)||age<0||age>7*86400000||site.probe!==true)return {tier:'unknown',score:null};
+ const matches=(Array.isArray(report.checks)?report.checks:[]).filter(x=>x&&x.group===group.id&&x.key===site.key&&x.api===site.api);
+ if(matches.length!==1)return {tier:'unknown',score:null};
+ const h=matches[0];
+ if(!Number.isFinite(h.score)||h.score<0||h.score>100)return {tier:'unknown',score:null};
+ if(h.status==='metadata_ok')return {tier:h.score>=80?'primary':'backup',score:h.score};
+ if(h.status==='metadata_empty')return {tier:'backup',score:h.score};
+ if(['unreachable','http_error','unrecognized_metadata','response_too_large','unsupported_url'].includes(h.status))return {tier:'review',score:h.score};
+ return {tier:'unknown',score:null};
+}
+function organize(catalog,report,now=Date.now()){
+ const tiers={primary:0,backup:1,unknown:2,review:3,disabled:4},duplicates=[],groups=[];
+ const locations=new Map();
+ for(const g of catalog.groups){
+  const rows=g.sites.map((s,i)=>({site:s,index:i,...assessment(g,s,report,now)}));
+  for(const row of rows){const sig=row.site.api; if(!locations.has(sig))locations.set(sig,[]);locations.get(sig).push({group:g.id,key:row.site.key,name:row.site.name,type:row.site.type})}
+  const free=rows.filter(x=>x.site.locked!==true&&x.site.approved===true);
+  free.sort((a,b)=>tiers[a.tier]-tiers[b.tier]||(b.score??-1)-(a.score??-1)||a.index-b.index);
+  let cursor=0;
+  const ordered=rows.map(x=>x.site.locked===true||x.site.approved!==true?x:free[cursor++]);
+  groups.push({id:g.id,rows:ordered.map((x,i)=>({key:x.site.key,name:x.site.name,tier:x.tier,score:x.score,locked:x.site.locked===true,from:x.index,to:i}))});
+ }
+ for(const [api,refs] of locations)if(refs.length>1)duplicates.push({api,refs});
+ return {groups,duplicates};
+}
+function applyOrganization(catalog,plan){
+ const copy=JSON.parse(JSON.stringify(catalog));
+ if(plan.groups.length!==copy.groups.length)throw Error('编排已过期');
+ for(const g of copy.groups){
+  const p=plan.groups.find(x=>x.id===g.id);
+  if(!p||p.rows.length!==g.sites.length||new Set(p.rows.map(x=>x.key)).size!==g.sites.length)throw Error('编排已过期');
+  const byKey=new Map(g.sites.map(s=>[s.key,s]));
+  for(const row of p.rows){const s=byKey.get(row.key);if(!s||g.sites[row.from]?.key!==row.key||(s.locked===true||s.approved!==true)&&row.from!==row.to)throw Error('编排已过期或位置锁定')}
+  g.sites=p.rows.map(x=>byKey.get(x.key));
+ }
+ return copy;
+}
+// END ORGANIZER ENGINE
 const el=(tag,value)=>{const n=document.createElement(tag);n.textContent=value;return n};
 function validApi(s){try{const u=new URL(s);return u.protocol==='https:'&&!u.username&&!u.password&&!u.search&&!u.hash&&!/\s/.test(s)}catch{return false}}
 const DRAFT_KEY='anjun-harbor.catalog.v1';
@@ -70,6 +112,7 @@ function navigate(page){const btn=document.querySelector('nav [data-page="'+page
 function showPreview(){try{const p=previewCatalog(data);$('previewSummary').textContent=p.index.urls.length?'将生成 '+p.index.urls.length+' 个独立点播仓库':'没有可发布的独立仓库；线上仍使用旧订阅回退。';$('previewJson').textContent=JSON.stringify(p,null,2)}catch(e){$('previewSummary').textContent=String(e);$('previewJson').textContent='校验失败，不应发布'}}
 function updateOverview(){const sites=data.groups.flatMap(g=>g.sites);const values=[['仓库',data.groups.length],['接口',sites.length],['审核启用',sites.filter(s=>s.approved).length],['允许检测',sites.filter(s=>s.approved&&s.probe).length]];$('metrics').replaceChildren(...values.map(([k,v])=>{const a=el('div','');a.className='metric';a.append(el('span',k),el('strong',String(v)));return a}));$('groupSummary').replaceChildren(...data.groups.map(g=>el('p',g.name+' · '+g.sites.filter(s=>s.approved).length+' / '+g.sites.length+' 已启用')));const matching=health.filter(h=>data.groups.some(g=>g.id===h.group&&g.sites.some(s=>s.key===h.key&&s.api===h.api)));$('qualitySummary').textContent=matching.length?'匹配当前目录的报告：'+matching.length+' 项':'尚无匹配当前目录的检测报告';$('qualityList').replaceChildren(...matching.map(h=>{const a=el('article','');a.append(el('strong',String(h.key)),el('p',String(h.status)+(h.score==null?'':' · '+h.score+'/100')+(h.elapsed_ms==null?'':' · '+h.elapsed_ms+' ms')));return a}))}
 function render(){
+ pendingPlan=null;$('organizeApply').disabled=true;$('organizeList').replaceChildren(el('p','请生成最新编排建议。'));
  updateOverview();
  const selected=$('group').value;
  $('group').replaceChildren(...data.groups.map(g=>{const n=el('option',g.name);n.value=g.id;return n}));
@@ -77,6 +120,7 @@ function render(){
  $('list').replaceChildren();
  for(const g of data.groups){const block=el('div','');block.append(el('h3',g.name+' · '+g.sites.length));
  g.sites.forEach((s,i)=>{const q=$('search').value.trim().toLowerCase(),f=$('filter').value;if(q&&!((s.name+' '+s.api).toLowerCase().includes(q)))return;if(f==='approved'&&!s.approved||f==='disabled'&&s.approved)return;const a=el('article','');a.append(el('strong',s.name),el('p',s.api));
+ const lock=el('button',s.locked?'解除编排锁定':'锁定编排位置');lock.onclick=()=>{s.locked=!s.locked;render()};
  const rename=el('button','改名');rename.onclick=()=>{const v=prompt('新名称',s.name);if(v&&v.trim()){s.name=v.trim();render()}};
  const up=el('button','↑');up.disabled=i===0;up.onclick=()=>{[g.sites[i-1],g.sites[i]]=[g.sites[i],g.sites[i-1]];render()};
  const down=el('button','↓');down.disabled=i===g.sites.length-1;down.onclick=()=>{[g.sites[i+1],g.sites[i]]=[g.sites[i],g.sites[i+1]];render()};
@@ -85,7 +129,7 @@ function render(){
  const match=health.find(h=>h.group===g.id&&h.key===s.key&&h.api===s.api);
  if(match)a.append(el('p','元数据检测：'+match.status+(match.score==null?'':' · '+match.score+'/100')+(match.elapsed_ms==null?'':' · '+match.elapsed_ms+' ms')));
  const move=el('select','');for(const target of data.groups){const op=el('option',target.name);op.value=target.id;move.append(op)}move.value=g.id;move.setAttribute('aria-label','移动接口至仓库');move.onchange=()=>{const target=data.groups.find(x=>x.id===move.value);if(!target||target===g)return;if(target.sites.some(x=>x.api===s.api||x.key===s.key)){$('msg').textContent='目标仓库存在重复接口';move.value=g.id;return}target.sites.push(s);g.sites.splice(i,1);render()};const del=el('button','移除');del.onclick=()=>{if(confirm('移除此接口？')){g.sites.splice(i,1);render()}};
- a.append(el('small',s.approved?'已审核启用':'停用 / 待审核'),rename,up,down,toggle,check,move,del);block.append(a)});$('list').append(block)}
+ a.append(el('small',s.approved?'已审核启用':'停用 / 待审核'),rename,up,down,toggle,check,lock,move,del);block.append(a)});$('list').append(block)}
 }
 $('file').onchange=async()=>{try{const f=$('file').files[0];if(!f)return;if(f.size>8*1024*1024)throw Error('文件过大');const obj=JSON.parse(await f.text());$('candidates').replaceChildren();
  if(obj.version===1&&Array.isArray(obj.groups)){validateCatalog(obj);if(!confirm('加载目录将替换当前页面中的编辑内容，继续？'))return;data=obj;render();return}
@@ -98,7 +142,7 @@ $('add').onclick=()=>{const name=$('name').value.trim(),api=$('api').value.trim(
  if(!name||!validApi(api)||!authorization||!$('approved').checked){$('msg').textContent='请填写名称、合规 HTTPS API、授权依据并确认审核。';return}
  const g=data.groups.find(g=>g.id===$('group').value);if(g.sites.some(s=>s.api===api)){ $('msg').textContent='此仓库已经存在相同 API';return}
  g.sites.push({key:'s-'+crypto.getRandomValues(new Uint32Array(2)).join('-'),name,api,type:Number($('type').value),approved:true,authorization,probe:$('probe').checked});$('msg').textContent='已添加，请导出并发布。';$('approved').checked=false;$('probe').checked=false;render()};
-$('health').onchange=async()=>{try{const f=$('health').files[0];if(!f)return;if(f.size>8*1024*1024)throw Error('文件过大');const obj=JSON.parse(await f.text());if(!Array.isArray(obj.checks))throw Error('报告格式错误');health=obj.checks.filter(x=>x&&typeof x==='object');render()}catch(e){$('msg').textContent=String(e)}};
+$('health').onchange=async()=>{try{const f=$('health').files[0];if(!f)return;if(f.size>8*1024*1024)throw Error('文件过大');const obj=JSON.parse(await f.text());if(!Array.isArray(obj.checks))throw Error('报告格式错误');health=obj.checks.filter(x=>x&&typeof x==='object');healthReport={checks:health,checked_at:obj.checked_at};render()}catch(e){$('msg').textContent=String(e)}};
 $('deps').onchange=async()=>{try{const f=$('deps').files[0];if(!f)return;if(f.size>8*1024*1024)throw Error('文件过大');const o=JSON.parse(await f.text());if(!Array.isArray(o.dependencies)||!Array.isArray(o.possible_name_conflicts))throw Error('依赖报告格式错误');const list=$('depList');list.replaceChildren(el('p','依赖 '+o.dependencies.length+' 项 · 同名冲突提示 '+o.possible_name_conflicts.length+' 项 · 未分类字段 '+(o.unclassified_reference_fields||0)+' 项'));for(const d of o.dependencies.slice(0,2000)){if(!d||typeof d!=='object')continue;const a=el('article','');a.append(el('strong',String(d.kind||'unknown')+' · '+String(d.status||'')),el('p',String(d.location||'')+' : '+String(d.reference||'')));if(d.sha256)a.append(el('small','SHA-256: '+String(d.sha256)));list.append(a)}}catch(e){$('msg').textContent=String(e)}};
 async function jsonFile(id){const f=$(id).files[0];if(!f)throw Error('请先选择文件');if(f.size>8*1024*1024)throw Error('文件过大');return JSON.parse(await f.text())}
 function stable(v){if(Array.isArray(v))return '['+v.map(stable).join(',')+']';if(v!==null&&typeof v==='object')return '{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+stable(v[k])).join(',')+'}';return JSON.stringify(v)}
@@ -114,6 +158,9 @@ $('compare').onclick=async()=>{try{showDiff(compareLocal(await jsonFile('oldSnap
 $('diffReport').onchange=async()=>{try{showDiff(await jsonFile('diffReport'))}catch(e){$('msg').textContent=String(e)}};
 $('export').onclick=()=>{try{validateCatalog(data)}catch(e){$('msg').textContent=String(e);return}const u=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='catalog.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
 document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>navigate(b.dataset.page));document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>navigate(b.dataset.go));$('search').oninput=render;$('filter').onchange=render;$('preview').onclick=showPreview;
+const tierNames={primary:'主力建议',backup:'备用建议',unknown:'未测 / 报告过期',review:'异常待复核',disabled:'停用 / 待审核'};
+$('organizePreview').onclick=()=>{try{validateCatalog(data);pendingPlan=organize(data,healthReport);const list=$('organizeList');list.replaceChildren(el('p','重复地址组：'+pendingPlan.duplicates.length+'（只提示，不自动删除）'));for(const d of pendingPlan.duplicates){list.append(el('p',d.api+' · '+d.refs.map(x=>x.group+'/'+x.name).join('；')))}let moves=0;for(const g of pendingPlan.groups){list.append(el('h3',data.groups.find(x=>x.id===g.id).name));for(const row of g.rows){if(row.from!==row.to)moves++;list.append(el('p',(row.from+1)+' → '+(row.to+1)+' · '+row.name+' · '+tierNames[row.tier]+(row.score===null?'':' · '+row.score+'/100')+(row.locked?' · 锁定':'')))}}list.append(el('p','建议移动 '+moves+' 项。仅改变顺序，不改变启用状态。'));$('organizeApply').disabled=moves===0}catch(e){pendingPlan=null;$('organizeApply').disabled=true;$('msg').textContent=String(e)}};
+$('organizeApply').onclick=()=>{try{if(!pendingPlan)return;if(!confirm('仅将建议顺序应用到当前草稿，继续？'))return;data=applyOrganization(data,pendingPlan);render();$('msg').textContent='已应用到草稿，尚未发布。'}catch(e){$('msg').textContent=String(e)}};
 $('saveDraft').onclick=()=>{try{validateCatalog(data);localStorage.setItem(DRAFT_KEY,JSON.stringify(data));$('msg').textContent='草稿已保存到本浏览器。'}catch(e){$('msg').textContent='保存失败：'+String(e)}};
 $('restoreDraft').onclick=()=>{try{const value=localStorage.getItem(DRAFT_KEY);if(!value)throw Error('没有已保存草稿');const restored=validateCatalog(JSON.parse(value));if(confirm('恢复草稿将替换当前编辑内容，继续？')){data=restored;render();$('msg').textContent='草稿已恢复。'}}catch(e){$('msg').textContent=String(e)}};
 render();

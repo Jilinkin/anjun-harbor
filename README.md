@@ -1,4 +1,4 @@
-# Anjun Harbor · 0.6
+# Anjun Harbor · 0.7
 
 Personal Resource Index / independent VOD configuration builder.
 
@@ -57,3 +57,7 @@ The report identifies added, removed, changed and reordered sites by stable key,
 ## Manager workspace (0.6)
 
 Seven navigation areas: overview, import, interface library, quality, dependencies, changes, and publication. Search and filter interfaces, move them between groups, and preview generated VOD JSON before exporting. Save or restore a draft explicitly using local browser storage; availability varies for file URLs and private browsing, and export remains the portable backup. Importing a catalog or restoring a draft asks before replacing current edits. No automatic upload or GitHub credentials are required. Preview is client-side; the Python builder and CI remain authoritative. Static markup checks and JavaScript syntax checks run in CI; real browser and TV behavior still require manual testing.
+
+## Quality-assisted organization (0.7)
+
+In the quality panel, load health.json and generate an organization preview. Only matching, explicitly opted-in checks within seven days contribute scores. Primary suggestions have recognized nonempty metadata and score >=80; backup includes lower scores or empty lists; untested/stale entries remain unknown; observed failures are flagged for review. Sort suggestions are stable within each warehouse, preserve locked and disabled positions, and never change approval, move between warehouses, or delete entries. Exact repeated API strings are reported across groups, not automatically removed. The thresholds are initial metadata heuristics, not playback quality metrics. Applying a preview changes only the current local draft; export and publication are separate. Any edit or report change invalidates the preview. The lock affects automatic organization only, not manual edits. JavaScript tests use synthetic fixtures.
