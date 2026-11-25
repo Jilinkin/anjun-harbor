@@ -34,6 +34,7 @@ def main():
     mode.add_argument("--providers",type=Path)
     mode.add_argument("--rules",type=Path)
     mode.add_argument("--html-rules",type=Path)
+    mode.add_argument("--mixed",type=Path)
     p.add_argument("--allow-network",action="store_true")
     a=p.parse_args()
     try:
@@ -64,6 +65,12 @@ def main():
         print(json.dumps(status,ensure_ascii=False),flush=True)
         if not catalog.records:
             p.error("No valid records from reviewed HTML snapshots")
+    elif a.mixed:
+        from engine_registry import load_mixed
+        catalog,status=load_mixed(a.mixed,a.allow_network)
+        print(json.dumps(status,ensure_ascii=False),flush=True)
+        if not catalog.records:
+            p.error("No valid records from reviewed mixed providers")
     else:
         catalog=demo()
     base=f"http://{addr}:{a.port}"

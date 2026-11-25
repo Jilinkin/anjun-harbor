@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "Harbor JSON",
+      "kind": "Test",
+      "streams": [
+        {
+          "label": "Full",
+          "file": "https://media.example.com/json.mp4"
+        }
+      ]
+    }
+  ]
+}

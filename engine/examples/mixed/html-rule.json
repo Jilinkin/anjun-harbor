@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "provider": "html-example",
+  "approved": true,
+  "authorization": "Synthetic metadata fixture only",
+  "items": {
+    "kind": "css",
+    "path": "article.film"
+  },
+  "fields": {
+    "id": {
+      "selector": null,
+      "attribute": "data-id"
+    },
+    "name": {
+      "selector": {
+        "kind": "xpath",
+        "path": "./h2"
+      },
+      "attribute": "text"
+    },
+    "category": {
+      "selector": {
+        "kind": "css",
+        "path": ".kind"
+      },
+      "attribute": "text"
+    }
+  },
+  "episodes": {
+    "items": {
+      "kind": "css",
+      "path": "a.episode"
+    },
+    "name": {
+      "selector": null,
+      "attribute": "text"
+    },
+    "url": {
+      "selector": null,
+      "attribute": "href"
+    }
+  },
+  "media_hosts": [
+    "media.example.com"
+  ]
+}

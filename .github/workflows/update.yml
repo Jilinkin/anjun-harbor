@@ -37,6 +37,8 @@ on:
       - scripts/test_engine_rules.py
       - scripts/engine_html.py
       - scripts/test_engine_html.py
+      - scripts/engine_registry.py
+      - scripts/test_engine_registry.py
       - engine/examples/**
       - open.json
       - open/**

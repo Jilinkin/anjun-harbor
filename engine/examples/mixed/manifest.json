@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "providers": [
+    {
+      "kind": "cms-snapshot",
+      "provider": "cms-example",
+      "snapshot": "cms.json",
+      "approved": true,
+      "authorization": "Synthetic metadata fixture only",
+      "media_hosts": [
+        "media.example.com"
+      ]
+    },
+    {
+      "kind": "json-snapshot",
+      "provider": "json-example",
+      "snapshot": "json.json",
+      "approved": true,
+      "authorization": "Synthetic metadata fixture only",
+      "rule": "json-rule.json"
+    },
+    {
+      "kind": "html-snapshot",
+      "provider": "html-example",
+      "snapshot": "page.html",
+      "approved": true,
+      "authorization": "Synthetic metadata fixture only",
+      "rule": "html-rule.json"
+    }
+  ]
+}

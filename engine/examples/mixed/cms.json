@@ -1,0 +1,10 @@
+{
+  "list": [
+    {
+      "vod_id": "1",
+      "vod_name": "Harbor CMS",
+      "type_name": "Test",
+      "vod_play_url": "Full$https://media.example.com/cms.mp4"
+    }
+  ]
+}
