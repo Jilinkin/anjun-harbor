@@ -16,6 +16,8 @@ on:
       - scripts/test_audit_dependencies.py
       - scripts/compare_upstream.py
       - scripts/test_compare_upstream.py
+      - scripts/test_manager.py
+      - manager.html
       - .github/workflows/update.yml
 permissions:
   contents: write
@@ -38,6 +40,8 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             python3 -m unittest discover -s scripts -p 'test_*.py'
+            python3 -c 'from pathlib import Path; s=Path("manager.html").read_text(); Path("/tmp/harbor-manager.js").write_text(s.split("<script>",1)[1].split("</script>",1)[0])'
+            node --check /tmp/harbor-manager.js
             python3 scripts/build.py --publish
             python3 scripts/probe.py
             git add -A -- index.json warehouses health.json

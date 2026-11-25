@@ -1,4 +1,4 @@
-# Anjun Harbor · 0.5
+# Anjun Harbor · 0.6
 
 Personal Resource Index / independent VOD configuration builder.
 
@@ -53,3 +53,7 @@ python3 scripts/compare_upstream.py old.json new.json --output diff-report.json
 ```
 
 The report identifies added, removed, changed and reordered sites by stable key, changed field names, global configuration changes, dependency-review hints, and SHA-256 fingerprints of snapshots and changed entries. Duplicate or missing keys are rejected. It does not download upstream configurations, apply changes to the catalog, or enable type 3 publishing. Keep the old and new snapshots locally and review changes individually using the existing import and audit tools. Report keys and field names can still contain private information; do not publish reports without review. The browser comparison is a local preview, without fingerprints.
+
+## Manager workspace (0.6)
+
+Seven navigation areas: overview, import, interface library, quality, dependencies, changes, and publication. Search and filter interfaces, move them between groups, and preview generated VOD JSON before exporting. Save or restore a draft explicitly using local browser storage; availability varies for file URLs and private browsing, and export remains the portable backup. Importing a catalog or restoring a draft asks before replacing current edits. No automatic upload or GitHub credentials are required. Preview is client-side; the Python builder and CI remain authoritative. Static markup checks and JavaScript syntax checks run in CI; real browser and TV behavior still require manual testing.
