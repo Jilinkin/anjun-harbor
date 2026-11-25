@@ -1,4 +1,4 @@
-# Anjun Harbor · 0.9
+# Anjun Harbor · 1.0 RC1
 
 Personal Resource Index / independent VOD configuration builder.
 
@@ -73,3 +73,7 @@ Old snapshots are retained in the public repository; review all data before comm
 ## TV compatibility smoke tests (0.9)
 
 Independent open movie test subscription: https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/smoke.json . Two static warehouses link to CC BY 3.0 Blender films. Static fixtures disable search. The optional local read-only CMS server implements category/detail/keyword responses. See [TV acceptance](docs/TV-ACCEPTANCE.md) and [credits](smoke/README.md). Test fixtures are separate from the candidate and production channels. Actual TV playback and client compatibility remain unverified.
+
+## 1.0 RC1 — optional private media library
+
+Open film index: https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/open.json (four independent static warehouses; no real search). See credits in open/README.md and smoke/README.md. Optional local library: [deployment and acceptance](docs/LOCAL-LIBRARY.md). It scans only an explicitly selected folder, provides a private LAN CMS and single-range file playback, and does not publish any local data. Actual TV acceptance, resource breadth, stable URL for local service and external media availability remain outstanding. Production stays unchanged; RC1 is not a final release.

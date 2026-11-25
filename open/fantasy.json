@@ -1,0 +1,12 @@
+{
+  "sites": [
+    {
+      "key": "harbor_fantasy",
+      "name": "开放奇幻",
+      "type": 1,
+      "api": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/open/fantasy-data.json",
+      "searchable": 0,
+      "quickSearch": 0
+    }
+  ]
+}

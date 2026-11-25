@@ -22,6 +22,10 @@ on:
       - scripts/test_release.py
       - scripts/smoke_server.py
       - scripts/test_smoke.py
+      - scripts/local_library.py
+      - scripts/test_local_library.py
+      - open.json
+      - open/**
       - smoke.json
       - smoke/**
       - release-control.json

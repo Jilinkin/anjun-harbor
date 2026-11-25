@@ -1,0 +1,27 @@
+{
+  "code": 1,
+  "msg": "ok",
+  "page": 1,
+  "pagecount": 1,
+  "limit": 20,
+  "total": 1,
+  "class": [
+    {
+      "type_id": "3",
+      "type_name": "开放奇幻"
+    }
+  ],
+  "list": [
+    {
+      "vod_id": "3",
+      "type_id": "3",
+      "type_name": "开放奇幻",
+      "vod_name": "Sintel",
+      "vod_year": "2010",
+      "vod_remarks": "CC BY 3.0",
+      "vod_content": "© Blender Foundation / www.sintel.org. https://creativecommons.org/licenses/by/3.0/ . https://durian.blender.org/download/",
+      "vod_play_from": "direct",
+      "vod_play_url": "正片$https://mirror.nju.edu.cn/blender/demo/movies/Sintel.2010.1080p.mkv"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "sites": [
+    {
+      "key": "harbor_classic",
+      "name": "开放经典",
+      "type": 1,
+      "api": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/open/classic-data.json",
+      "searchable": 0,
+      "quickSearch": 0
+    }
+  ]
+}

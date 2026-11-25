@@ -1,0 +1,20 @@
+{
+  "urls": [
+    {
+      "name": "Harbor · 开放动画",
+      "url": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/smoke/animation.json"
+    },
+    {
+      "name": "Harbor · 开放科幻",
+      "url": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/smoke/scifi.json"
+    },
+    {
+      "name": "Harbor · 开放奇幻",
+      "url": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/open/fantasy.json"
+    },
+    {
+      "name": "Harbor · 开放经典",
+      "url": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/open/classic.json"
+    }
+  ]
+}
