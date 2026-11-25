@@ -18,6 +18,9 @@ on:
       - scripts/test_compare_upstream.py
       - scripts/test_manager.py
       - scripts/test_organizer.cjs
+      - scripts/release.py
+      - scripts/test_release.py
+      - release-control.json
       - manager.html
       - .github/workflows/update.yml
 permissions:
@@ -44,9 +47,9 @@ jobs:
             python3 -c 'from pathlib import Path; s=Path("manager.html").read_text(); Path("/tmp/harbor-manager.js").write_text(s.split("<script>",1)[1].split("</script>",1)[0])'
             node --check /tmp/harbor-manager.js
             node scripts/test_organizer.cjs
-            python3 scripts/build.py --publish
+            python3 scripts/release.py
             python3 scripts/probe.py
-            git add -A -- index.json warehouses health.json
+            git add -A -- index.json test.json releases release-status.json health.json
             if git diff --cached --quiet; then
               exit 0
             fi

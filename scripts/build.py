@@ -66,18 +66,8 @@ def main():
     data = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
     outputs, index = build(data)
     print(f"{len(outputs)} nonempty independent warehouses")
-    if not args.publish:
-        return
-    for path, config in outputs.items():
-        write(ROOT / path, config)
-    if index["urls"]:
-        write(ROOT / "index.json", index)
-    else:
-        # Restore the explicitly preserved legacy entry rather than publish an empty list.
-        write(ROOT / "index.json", json.loads((ROOT / "legacy.json").read_text(encoding="utf-8")))
-    for path in (ROOT / "warehouses").glob("*.json"):
-        if str(path.relative_to(ROOT)) not in outputs:
-            path.unlink()
+    if args.publish:
+        parser.error("Direct publication retired; use scripts/release.py")
 
 if __name__ == "__main__":
     main()

@@ -1,28 +1,28 @@
-# Anjun Harbor · 0.7
+# Anjun Harbor · 0.8
 
 Personal Resource Index / independent VOD configuration builder.
 
 ## Local manager
 
-Download [manager.html](manager.html) and open it locally in a browser. Load [catalog.json](catalog.json) or import a strict JSON configuration as candidates. No imported code is executed. Review individual independent HTTPS type 0/1 APIs, record authorization, name and arrange them, then export catalog.json and replace the file in this repository. Never include private credentials in the public repository.
+Download [manager.html](manager.html) and open it locally in a browser. Load [catalog.json](catalog.json) or import a strict JSON configuration as candidates. No imported code is executed. Review individual independent HTTPS type 0/1 APIs, record authorization, name and arrange them, then export catalog.json and replace the file in this repository to stage a test release. Never include private credentials in the public repository.
 
 ## Publication
 
-The workflow tests and generates independent `warehouses/*.json` from approved entries only. It includes no live feeds or executable dependencies. The fixed entry remains:
+The workflow tests and stages immutable independent `releases/<id>/warehouses/*.json` from approved entries only. It includes no live feeds or executable dependencies. The fixed entry remains:
 
 https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/index.json
 
-Empty groups are not published. With no approved entries, the existing legacy subscription remains active as a reversible fallback; it may include live TV. `legacy.json` preserves the original entry. Complex type 3/JAR/JS configurations require dependency review and a future controlled publishing system and are not imported as independent APIs. API reachability and playback are not established by format validation. This version does not test remote playback or automatically find resources.
+Empty groups are not published. With no approved entries, the test index is empty and the selected production release remains unchanged. The initial legacy release may include live TV. `legacy.json` preserves the original entry. Complex type 3/JAR/JS configurations require dependency review and a future controlled publishing system and are not imported as independent APIs. API reachability and playback are not established by format validation. This version does not test remote playback or automatically find resources.
 
 ## CLI
 
 ```sh
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/build.py
-python3 scripts/build.py --publish
+python3 scripts/release.py
 ```
 
-Git history preserves prior versions. The daily workflow regenerates the catalog and validates configuration; it retries non-fast-forward push conflicts against the newest main without force-pushing. The old `sources.json` and `scripts/check.py` are retained as V0.1 reference only.
+Git history preserves prior versions. The daily workflow stages the catalog and validates configuration; it retries non-fast-forward push conflicts against the newest main without force-pushing. The old `sources.json` and `scripts/check.py` are retained as V0.1 reference only.
 
 ## Metadata health checks (0.3)
 
@@ -61,3 +61,11 @@ Seven navigation areas: overview, import, interface library, quality, dependenci
 ## Quality-assisted organization (0.7)
 
 In the quality panel, load health.json and generate an organization preview. Only matching, explicitly opted-in checks within seven days contribute scores. Primary suggestions have recognized nonempty metadata and score >=80; backup includes lower scores or empty lists; untested/stale entries remain unknown; observed failures are flagged for review. Sort suggestions are stable within each warehouse, preserve locked and disabled positions, and never change approval, move between warehouses, or delete entries. Exact repeated API strings are reported across groups, not automatically removed. The thresholds are initial metadata heuristics, not playback quality metrics. Applying a preview changes only the current local draft; export and publication are separate. Any edit or report change invalidates the preview. The lock affects automatic organization only, not manual edits. JavaScript tests use synthetic fixtures.
+
+## Staged release management (0.8)
+
+Stable production entry: `index.json`. Stable test entry: `test.json`. The test channel contains only the latest reviewed, nonempty independent configurations; an empty candidate has no warehouses.
+
+Actions stages a content-addressed snapshot under `releases/<SHA-256>/` and writes `release-status.json`. Test the candidate on your client first. To promote, edit `release-control.json` and set `active` to the full candidate ID from the report. The next successful workflow verifies the snapshot and switches the production index. To roll back, select a prior verified release ID or explicitly select `legacy`. Changing the catalog alone never changes production. Direct build.py --publish is retired. Release comparison counts refer to index URLs, so new snapshot addresses can appear as added/removed even if the logical group is unchanged.
+
+Old snapshots are retained in the public repository; review all data before committing and do not publish private URLs. Rollback restores configuration, not upstream availability or permissions. If a resource becomes unauthorized or unsafe, do not roll back to a snapshot containing it. No automatic promotion. Git history and release directories record prior versions. The manager can display the release report, but cannot directly push or promote. Tests use synthetic data.

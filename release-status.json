@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "active": "legacy",
+  "candidate": null,
+  "candidate_ready": false,
+  "comparison": {
+    "active_warehouses": 1,
+    "candidate_warehouses": 0,
+    "added_urls": 0,
+    "removed_urls": 1
+  }
+}
