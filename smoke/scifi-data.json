@@ -1,0 +1,28 @@
+{
+  "code": 1,
+  "msg": "ok",
+  "page": 1,
+  "pagecount": 1,
+  "limit": 20,
+  "total": 1,
+  "class": [
+    {
+      "type_id": "2",
+      "type_pid": 0,
+      "type_name": "开放科幻"
+    }
+  ],
+  "list": [
+    {
+      "vod_id": "2",
+      "type_id": "2",
+      "type_name": "开放科幻",
+      "vod_name": "Tears of Steel",
+      "vod_year": "2012",
+      "vod_remarks": "CC BY 3.0 · 测试短片",
+      "vod_content": "© Blender Foundation / mango.blender.org. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Project: https://mango.blender.org/about/.",
+      "vod_play_from": "mp4",
+      "vod_play_url": "正片$https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+    }
+  ]
+}

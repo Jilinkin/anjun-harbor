@@ -1,0 +1,28 @@
+{
+  "code": 1,
+  "msg": "ok",
+  "page": 1,
+  "pagecount": 1,
+  "limit": 20,
+  "total": 1,
+  "class": [
+    {
+      "type_id": "1",
+      "type_pid": 0,
+      "type_name": "开放动画"
+    }
+  ],
+  "list": [
+    {
+      "vod_id": "1",
+      "type_id": "1",
+      "type_name": "开放动画",
+      "vod_name": "Big Buck Bunny",
+      "vod_year": "2008",
+      "vod_remarks": "CC BY 3.0 · 测试短片",
+      "vod_content": "© 2008 Blender Foundation / www.bigbuckbunny.org. CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Project: https://peach.blender.org/about/.",
+      "vod_play_from": "mp4",
+      "vod_play_url": "正片$https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    }
+  ]
+}

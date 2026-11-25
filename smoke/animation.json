@@ -1,0 +1,12 @@
+{
+  "sites": [
+    {
+      "key": "harbor_animation",
+      "name": "开放动画 · 测试",
+      "type": 1,
+      "api": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/smoke/animation-data.json",
+      "searchable": 0,
+      "quickSearch": 0
+    }
+  ]
+}

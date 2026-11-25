@@ -1,0 +1,12 @@
+{
+  "sites": [
+    {
+      "key": "harbor_scifi",
+      "name": "开放科幻 · 测试",
+      "type": 1,
+      "api": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/smoke/scifi-data.json",
+      "searchable": 0,
+      "quickSearch": 0
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Anjun Harbor · 0.8
+# Anjun Harbor · 0.9
 
 Personal Resource Index / independent VOD configuration builder.
 
@@ -69,3 +69,7 @@ Stable production entry: `index.json`. Stable test entry: `test.json`. The test 
 Actions stages a content-addressed snapshot under `releases/<SHA-256>/` and writes `release-status.json`. Test the candidate on your client first. To promote, edit `release-control.json` and set `active` to the full candidate ID from the report. The next successful workflow verifies the snapshot and switches the production index. To roll back, select a prior verified release ID or explicitly select `legacy`. Changing the catalog alone never changes production. Direct build.py --publish is retired. Release comparison counts refer to index URLs, so new snapshot addresses can appear as added/removed even if the logical group is unchanged.
 
 Old snapshots are retained in the public repository; review all data before committing and do not publish private URLs. Rollback restores configuration, not upstream availability or permissions. If a resource becomes unauthorized or unsafe, do not roll back to a snapshot containing it. No automatic promotion. Git history and release directories record prior versions. The manager can display the release report, but cannot directly push or promote. Tests use synthetic data.
+
+## TV compatibility smoke tests (0.9)
+
+Independent open movie test subscription: https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/smoke.json . Two static warehouses link to CC BY 3.0 Blender films. Static fixtures disable search. The optional local read-only CMS server implements category/detail/keyword responses. See [TV acceptance](docs/TV-ACCEPTANCE.md) and [credits](smoke/README.md). Test fixtures are separate from the candidate and production channels. Actual TV playback and client compatibility remain unverified.

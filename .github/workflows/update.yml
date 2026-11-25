@@ -20,6 +20,10 @@ on:
       - scripts/test_organizer.cjs
       - scripts/release.py
       - scripts/test_release.py
+      - scripts/smoke_server.py
+      - scripts/test_smoke.py
+      - smoke.json
+      - smoke/**
       - release-control.json
       - manager.html
       - .github/workflows/update.yml
