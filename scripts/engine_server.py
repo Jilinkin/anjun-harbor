@@ -17,10 +17,10 @@ def demo():
         adapters.append(CmsSnapshotAdapter(slug,data,"CC BY 3.0; see original project credits in description."))
     return Catalog(adapters)
 
-def route(path,base,catalog):
+def route(path,base,catalog,warehouse_name="Harbor Engine"):
     u=urlsplit(path)
     if u.path=="/config.json":
-        return {"sites":[{"key":"harbor_engine","name":"Harbor Engine","type":1,"api":base+"/api","searchable":1,"quickSearch":1}]}
+        return {"sites":[{"key":"harbor_engine","name":warehouse_name,"type":1,"api":base+"/api","searchable":1,"quickSearch":1}]}
     if u.path=="/api":
         return catalog.cms(parse_qs(u.query,max_num_fields=32))
     return None
@@ -37,9 +37,10 @@ def main():
     mode.add_argument("--mixed",type=Path)
     p.add_argument("--allow-network",action="store_true")
     p.add_argument("--dedupe-selection",type=Path)
+    p.add_argument("--preferences",type=Path)
     a=p.parse_args()
-    if a.dedupe_selection and (not a.mixed or a.allow_network):
-        p.error("Deduplication requires a local mixed snapshot manifest without network mode")
+    if (a.dedupe_selection or a.preferences) and (not a.mixed or a.allow_network):
+        p.error("Deduplication and preferences require a local mixed snapshot manifest without network mode")
     try:
         addr=ipaddress.IPv4Address(a.host)
         private=any(addr in ipaddress.IPv4Network(n) for n in ("10.0.0.0/8","172.16.0.0/12","192.168.0.0/16"))
@@ -83,11 +84,20 @@ def main():
             print(json.dumps(history,ensure_ascii=False),flush=True)
     else:
         catalog=demo()
+    warehouse_name="Harbor Engine"
+    if a.preferences:
+        if any(s["status"]!="ok" for s in status):
+            p.error("Incomplete catalog; repair failed providers")
+        from engine_preferences import apply,load_json
+        catalog,warehouse_name,report=apply(catalog,load_json(a.preferences))
+        if not catalog.records:
+            p.error("All records hidden; review preferences")
+        print(json.dumps({"visible":report["after"],"hidden":len(report["hidden"])},ensure_ascii=False),flush=True)
     base=f"http://{addr}:{a.port}"
     class Handler(BaseHTTPRequestHandler):
         def do_GET(self):
             try:
-                obj=route(self.path,base,catalog)
+                obj=route(self.path,base,catalog,warehouse_name)
             except ValueError:
                 self.send_error(400)
                 return
