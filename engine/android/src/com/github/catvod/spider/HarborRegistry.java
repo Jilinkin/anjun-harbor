@@ -11,17 +11,22 @@ final class HarborRegistry {
         if(!ok)throw new IllegalArgumentException(message);
     }
     static HarborCatalog load(String inline,HarborCatalog reviewed)throws Exception {
+        return loadDetailed(inline,reviewed).catalog;
+    }
+    static HarborLoadResult loadDetailed(String inline,HarborCatalog reviewed)throws Exception {
         require(inline.length()<=65536,"Input limit");
         JSONObject root=new JSONObject(inline);
         Object version=root.get("version");
         require(version instanceof Integer,"Invalid version");
-        if(((Integer)version)==1)return HarborRules.load(inline,reviewed);
-        require(((Integer)version)==2&&root.length()==2&&root.has("providers"),"Invalid registry");
+        if(((Integer)version)==1)return new HarborLoadResult(HarborRules.load(inline,reviewed),"[]");
+        boolean isolated=((Integer)version)==3;
+        require((((Integer)version)==2||isolated)&&root.length()==2&&root.has("providers"),"Invalid registry");
         JSONArray providers=root.getJSONArray("providers");
         require(providers.length()>=1&&providers.length()<=8,"Provider limit");
         HashSet<String> seenProviders=new HashSet<>();
         HashSet<String> seenTitles=new HashSet<>();
         ArrayList<String[]> merged=new ArrayList<>();
+        JSONArray status=new JSONArray();
         int networkCount=0;
         // Validate every provider shape before making any network request.
         for(int i=0;i<providers.length();i++){
@@ -40,6 +45,7 @@ final class HarborRegistry {
             JSONObject provider=providers.getJSONObject(i);
             Object kind=provider.get("kind");
             HarborCatalog items;
+            try {
             if("cms-network-demo".equals(kind)){
                 items=cms(HarborNetwork.fetch(),reviewed);
             }else{
@@ -52,11 +58,22 @@ final class HarborRegistry {
                 items=cms(data,reviewed);
             }else throw new IllegalArgumentException("Unknown adapter");
             }
-            for(String[] row:items.query("","")){
-                if(seenTitles.add(row[0]))merged.add(row);
+            } catch(Exception ex) {
+                if(!isolated || ex instanceof InterruptedException || Thread.currentThread().isInterrupted()) throw ex;
+                // Only validated provider IDs and bounded error categories; never echo raw data.
+                status.put(new JSONObject().put("id",provider.getString("id")).put("status","failed")
+                    .put("reason",ex instanceof java.io.IOException?"transport":"invalid_or_unavailable").put("items",0));
+                continue;
             }
+            int unique=0;
+            java.util.List<String[]> rows=items.query("","");
+            for(String[] row:rows){
+                if(seenTitles.add(row[0])){merged.add(row);unique++;}
+            }
+            status.put(new JSONObject().put("id",provider.getString("id")).put("status","ok")
+                .put("items",rows.size()).put("unique",unique));
         }
-        return new HarborCatalog(merged.toArray(new String[0][]));
+        return new HarborLoadResult(new HarborCatalog(merged.toArray(new String[0][])),status.toString());
     }
     static HarborCatalog cms(JSONObject data,HarborCatalog reviewed)throws Exception{
         require(data.length()==1&&data.has("list"),"Invalid CMS fixture");
