@@ -1,4 +1,4 @@
-# Anjun Harbor · 0.4
+# Anjun Harbor · 0.5
 
 Personal Resource Index / independent VOD configuration builder.
 
@@ -43,3 +43,13 @@ python3 scripts/audit_dependencies.py /path/to/config.json --base-url https://ex
 The base URL is optional; the report inventories recognized JAR, JS, JSON and other file references, resolves relative paths, detects root escapes, reports missing local files, calculates SHA-256 for small local files, compares a supplied legacy MD5 value, and flags potential same-name conflicts. Remote references are unverified. Dynamic imports, inline or custom schemes and unknown formats are not comprehensively analyzed. A matching hash is not a safety or authorization verdict. Reports are local by default; review them for sensitive paths before sharing. Output must be a new file.
 
 Load dependency-report.json into manager.html to inspect results. Type 3 publication remains disabled; the independent builder still publishes only reviewed type 0/1 entries. No third-party files are added to this repository.
+
+## Upstream snapshot review (0.5)
+
+Save two versions of an authorized upstream strict JSON configuration locally. Compare them directly in manager.html or generate a separate report with:
+
+```sh
+python3 scripts/compare_upstream.py old.json new.json --output diff-report.json
+```
+
+The report identifies added, removed, changed and reordered sites by stable key, changed field names, global configuration changes, dependency-review hints, and SHA-256 fingerprints of snapshots and changed entries. Duplicate or missing keys are rejected. It does not download upstream configurations, apply changes to the catalog, or enable type 3 publishing. Keep the old and new snapshots locally and review changes individually using the existing import and audit tools. Report keys and field names can still contain private information; do not publish reports without review. The browser comparison is a local preview, without fingerprints.

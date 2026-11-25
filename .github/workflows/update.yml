@@ -14,6 +14,8 @@ on:
       - scripts/test_probe.py
       - scripts/audit_dependencies.py
       - scripts/test_audit_dependencies.py
+      - scripts/compare_upstream.py
+      - scripts/test_compare_upstream.py
       - .github/workflows/update.yml
 permissions:
   contents: write
