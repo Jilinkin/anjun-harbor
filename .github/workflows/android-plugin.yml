@@ -31,6 +31,10 @@ jobs:
           log-accepted-android-sdk-licenses: 'false'
       - name: Build and verify DEX
         run: bash engine/android/build.sh
+      - name: Test verified LAN deployment
+        run: |
+          cd engine/android
+          HARBOR_REQUIRE_ARTIFACT=1 python3 -m unittest test_serve_test.py
       - uses: actions/upload-artifact@v4
         with:
           name: harbor-android-prototype
