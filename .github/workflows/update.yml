@@ -33,6 +33,9 @@ on:
       - scripts/test_engine.py
       - scripts/engine_network.py
       - scripts/test_engine_network.py
+      - scripts/engine_rules.py
+      - scripts/test_engine_rules.py
+      - engine/examples/**
       - open.json
       - open/**
       - smoke.json

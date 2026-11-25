@@ -1,0 +1,8 @@
+{
+  "providers": [
+    {
+      "rule": "rule.json",
+      "snapshot": "snapshot.json"
+    }
+  ]
+}

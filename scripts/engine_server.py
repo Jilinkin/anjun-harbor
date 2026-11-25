@@ -1,4 +1,4 @@
-"""Single-warehouse local demonstration. No upstream network requests."""
+"""Single-warehouse gateway; network mode requires explicit opt-in."""
 import argparse
 import ipaddress
 import json
@@ -30,7 +30,9 @@ def main():
     p.add_argument("--host",default="127.0.0.1")
     p.add_argument("--port",type=int,default=8898)
     p.add_argument("--allow-lan",action="store_true")
-    p.add_argument("--providers",type=Path)
+    mode=p.add_mutually_exclusive_group()
+    mode.add_argument("--providers",type=Path)
+    mode.add_argument("--rules",type=Path)
     p.add_argument("--allow-network",action="store_true")
     a=p.parse_args()
     try:
@@ -49,6 +51,12 @@ def main():
         print(json.dumps(status,ensure_ascii=False),flush=True)
         if not catalog.records:
             p.error("No valid records from reviewed providers")
+    elif a.rules:
+        from engine_rules import load_rules
+        catalog,status=load_rules(a.rules)
+        print(json.dumps(status,ensure_ascii=False),flush=True)
+        if not catalog.records:
+            p.error("No valid records from reviewed snapshots")
     else:
         catalog=demo()
     base=f"http://{addr}:{a.port}"

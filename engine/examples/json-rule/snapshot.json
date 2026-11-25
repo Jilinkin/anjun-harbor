@@ -1,0 +1,17 @@
+{
+  "payload": {
+    "videos": [
+      {
+        "id": 1,
+        "title": "Harbor Example",
+        "kind": "Test",
+        "streams": [
+          {
+            "label": "Sample",
+            "file": "https://media.example.com/sample.mp4"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "provider": "example",
+  "approved": true,
+  "authorization": "Synthetic metadata fixture only",
+  "items": [
+    "payload",
+    "videos"
+  ],
+  "fields": {
+    "id": [
+      "id"
+    ],
+    "name": [
+      "title"
+    ],
+    "category": [
+      "kind"
+    ]
+  },
+  "episodes": {
+    "items": [
+      "streams"
+    ],
+    "name": [
+      "label"
+    ],
+    "url": [
+      "file"
+    ]
+  },
+  "media_hosts": [
+    "media.example.com"
+  ]
+}
