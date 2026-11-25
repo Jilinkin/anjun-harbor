@@ -7,6 +7,7 @@ import org.json.JSONObject;
 
 /** Built-in snapshot registry with explicit first-party demo network mode. */
 final class HarborRegistry {
+    private static final HarborCache CACHE=new HarborCache();
     private static void require(boolean ok,String message) {
         if(!ok)throw new IllegalArgumentException(message);
     }
@@ -36,7 +37,7 @@ final class HarborRegistry {
             require(identity instanceof String&&((String)identity).matches("[a-z][a-z0-9_-]{0,39}")&&seenProviders.add((String)identity),"Invalid or duplicate provider");
             Object kind=provider.get("kind");
             if("cms-network-demo".equals(kind)){
-                require(provider.length()==3&&Boolean.TRUE.equals(provider.opt("allow_network"))&&++networkCount<=1,"Explicit network opt-in required");
+                require((provider.length()==3||(isolated&&provider.length()==4&&Boolean.TRUE.equals(provider.opt("cache"))))&&Boolean.TRUE.equals(provider.opt("allow_network"))&&++networkCount<=1,"Explicit network opt-in required");
             }else{
                 require(("cms-snapshot".equals(kind)||"json-snapshot".equals(kind)||"html-snapshot".equals(kind))&&provider.length()==3&&provider.opt("snapshot") instanceof JSONObject,"Unknown adapter or options");
             }
@@ -45,9 +46,15 @@ final class HarborRegistry {
             JSONObject provider=providers.getJSONObject(i);
             Object kind=provider.get("kind");
             HarborCatalog items;
+            String delivery="snapshot";
             try {
             if("cms-network-demo".equals(kind)){
-                items=cms(HarborNetwork.fetch(),reviewed);
+                if(Boolean.TRUE.equals(provider.opt("cache"))){
+                    HarborLoadResult loaded=CACHE.get(reviewed,null,System.nanoTime());
+                    items=loaded.catalog;delivery=loaded.status;
+                }else{
+                    items=cms(HarborNetwork.fetch(),reviewed);delivery="network";
+                }
             }else{
             JSONObject data=provider.getJSONObject("snapshot");
             if("json-snapshot".equals(kind)){
@@ -71,7 +78,7 @@ final class HarborRegistry {
                 if(seenTitles.add(row[0])){merged.add(row);unique++;}
             }
             status.put(new JSONObject().put("id",provider.getString("id")).put("status","ok")
-                .put("items",rows.size()).put("unique",unique));
+                .put("items",rows.size()).put("unique",unique).put("delivery",delivery));
         }
         return new HarborLoadResult(new HarborCatalog(merged.toArray(new String[0][])),status.toString());
     }
