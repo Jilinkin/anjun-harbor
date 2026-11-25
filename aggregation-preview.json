@@ -1,23 +1,23 @@
 {
   "urls": [
     {
-      "name": "01 · YW",
+      "name": "Harbor 01",
       "url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json"
     },
     {
-      "name": "02 · 香雅情",
+      "name": "Harbor 02",
       "url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"
     },
     {
-      "name": "03 · 高天流云",
+      "name": "Harbor 03",
       "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"
     },
     {
-      "name": "04 · 分享",
+      "name": "Harbor 04",
       "url": "https://raw.githubusercontent.com/maoystv/6/main/000.json"
     },
     {
-      "name": "05 · 东篱线路",
+      "name": "Harbor 05",
       "url": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json"
     }
   ]
