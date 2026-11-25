@@ -17,7 +17,7 @@ public final class Harbor extends Spider {
         if(ext!=null&&!ext.trim().isEmpty()){
             // Invalid input fails closed; never treat ext as a URL or executable code.
             catalog=new HarborCatalog(new String[0][]);
-            catalog=HarborRules.load(ext,CATALOG);
+            catalog=HarborRegistry.load(ext,CATALOG);
         }
     }
     private JSONObject row(String[] f,boolean detail) throws Exception {
