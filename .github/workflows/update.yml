@@ -43,6 +43,8 @@ on:
       - scripts/test_engine_dedupe.py
       - scripts/engine_preferences.py
       - scripts/test_engine_preferences.py
+      - scripts/engine_releases.py
+      - scripts/test_engine_releases.py
       - engine/examples/**
       - open.json
       - open/**

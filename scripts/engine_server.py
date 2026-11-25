@@ -35,6 +35,8 @@ def main():
     mode.add_argument("--rules",type=Path)
     mode.add_argument("--html-rules",type=Path)
     mode.add_argument("--mixed",type=Path)
+    mode.add_argument("--release-store",type=Path)
+    p.add_argument("--channel",choices=("active","candidate"),default="active")
     p.add_argument("--allow-network",action="store_true")
     p.add_argument("--dedupe-selection",type=Path)
     p.add_argument("--preferences",type=Path)
@@ -82,9 +84,14 @@ def main():
             from audit_dependencies import read_limited
             catalog,history=apply(catalog,json.loads(read_limited(a.dedupe_selection).decode("utf-8-sig")))
             print(json.dumps(history,ensure_ascii=False),flush=True)
+    elif a.release_store:
+        if a.allow_network:
+            p.error("Release snapshot mode is offline")
+        from engine_releases import Store
+        catalog,release_name=Store(a.release_store).channel(a.channel)
     else:
         catalog=demo()
-    warehouse_name="Harbor Engine"
+    warehouse_name=release_name if a.release_store else "Harbor Engine"
     if a.preferences:
         if any(s["status"]!="ok" for s in status):
             p.error("Incomplete catalog; repair failed providers")
