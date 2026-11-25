@@ -1,0 +1,14 @@
+{
+  "spider": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/abefe13500b01b8a7474ad9d58271c49c9b070cb/android-demo/rc2/harbor.jar;md5;014807ace9149a5170d6118bcaaba34f",
+  "sites": [
+    {
+      "key": "harbor_rc2",
+      "name": "Harbor RC2",
+      "type": 3,
+      "api": "csp_Harbor",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    }
+  ]
+}
