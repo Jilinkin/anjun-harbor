@@ -1,4 +1,4 @@
-name: Refresh resource index
+name: Validate and publish resource index
 on:
   workflow_dispatch:
   schedule:
@@ -6,32 +6,40 @@ on:
   push:
     branches: [main]
     paths:
-      - sources.json
-      - scripts/check.py
+      - catalog.json
+      - legacy.json
+      - scripts/build.py
+      - scripts/test_build.py
       - .github/workflows/update.yml
-
 permissions:
   contents: write
-
 concurrency:
   group: resource-index
   cancel-in-progress: false
-
 jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      - name: Check and regenerate index
-        run: python3 scripts/check.py
-      - name: Publish changed files
+        with:
+          ref: main
+      - name: Test and publish
         run: |
-          git add index.json status.json
-          if git diff --cached --quiet; then
-            exit 0
-          fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Refresh resource index'
-          git push
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            python3 -m unittest discover -s scripts -p 'test_*.py'
+            python3 scripts/build.py --publish
+            git add -A -- index.json warehouses
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m 'Publish reviewed resource index'
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+          exit 1

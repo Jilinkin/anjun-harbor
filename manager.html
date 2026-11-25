@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anjun Harbor Manager</title>
+<style>
+:root{color-scheme:light dark;font:15px system-ui,sans-serif}body{max-width:960px;margin:32px auto;padding:0 20px}h1{letter-spacing:-.04em}section{border:1px solid #8885;border-radius:12px;padding:16px;margin:16px 0}button,input,select{font:inherit;padding:8px;margin:4px;border-radius:6px;border:1px solid #8888}button{cursor:pointer}label{display:block}small{opacity:.8}article{border-top:1px solid #8885;padding:10px 0;overflow-wrap:anywhere}#msg{white-space:pre-wrap}input[type=text],input[type=url]{max-width:95%;width:350px}
+</style>
+<h1>Anjun Harbor <small>Manager 0.2</small></h1><p>离线管理 · 独立点播 API · 审核后导出</p>
+<section><h2>1. 加载目录或候选配置</h2><input id="file" type="file" accept=".json,application/json"><p>加载 catalog.json 可恢复目录；加载普通严格 JSON 的 sites 配置可预览候选。仅显示 type 0/1 的 HTTPS 独立接口，不执行任何第三方代码。</p><div id="candidates"></div></section>
+<section><h2>2. 添加与审核接口</h2><label>仓库<select id="group"></select></label><label>显示名称<input id="name" type="text"></label><label>API<input id="api" type="url" placeholder="https://example.com/vod"></label><label>类型<select id="type"><option value="1">1 · JSON</option><option value="0">0 · XML</option></select></label><label>授权依据（公开说明，不含密钥）<input id="auth" type="text"></label><label><input id="approved" type="checkbox">已确认有权使用及公开此接口，且不依赖额外脚本</label><button id="add">添加到仓库</button><p id="msg" role="status"></p></section>
+<section><h2>3. 自建仓库</h2><div id="list"></div><button id="export">导出 catalog.json</button><p>导出后替换 GitHub 上的 catalog.json，自动构建发布。未保存的编辑仅存在当前页面。</p></section>
+<script>
+const $=id=>document.getElementById(id);
+let data={
+  "version": 1,
+  "groups": [
+    {
+      "id": "featured",
+      "name": "Harbor · 精选",
+      "sites": []
+    },
+    {
+      "id": "movies",
+      "name": "Harbor · 电影",
+      "sites": []
+    },
+    {
+      "id": "series",
+      "name": "Harbor · 剧集",
+      "sites": []
+    },
+    {
+      "id": "animation",
+      "name": "Harbor · 动画",
+      "sites": []
+    },
+    {
+      "id": "documentary",
+      "name": "Harbor · 纪录片",
+      "sites": []
+    },
+    {
+      "id": "lab",
+      "name": "Harbor · 实验室",
+      "sites": []
+    }
+  ]
+};
+const el=(tag,value)=>{const n=document.createElement(tag);n.textContent=value;return n};
+function validApi(s){try{const u=new URL(s);return u.protocol==='https:'&&!u.username&&!u.password&&!u.search&&!u.hash&&!/\s/.test(s)}catch{return false}}
+function render(){
+ const selected=$('group').value;
+ $('group').replaceChildren(...data.groups.map(g=>{const n=el('option',g.name);n.value=g.id;return n}));
+ if(data.groups.some(g=>g.id===selected))$('group').value=selected;
+ $('list').replaceChildren();
+ for(const g of data.groups){const block=el('div','');block.append(el('h3',g.name+' · '+g.sites.length));
+ g.sites.forEach((s,i)=>{const a=el('article','');a.append(el('strong',s.name),el('p',s.api));
+ const rename=el('button','改名');rename.onclick=()=>{const v=prompt('新名称',s.name);if(v&&v.trim()){s.name=v.trim();render()}};
+ const up=el('button','↑');up.disabled=i===0;up.onclick=()=>{[g.sites[i-1],g.sites[i]]=[g.sites[i],g.sites[i-1]];render()};
+ const down=el('button','↓');down.disabled=i===g.sites.length-1;down.onclick=()=>{[g.sites[i+1],g.sites[i]]=[g.sites[i],g.sites[i+1]];render()};
+ const toggle=el('button',s.approved?'停用':'审核启用');toggle.onclick=()=>{if(s.approved)s.approved=false;else{const v=prompt('确认已获授权并填写公开依据','');if(v&&v.trim()){s.authorization=v.trim();s.approved=true}}render()};
+ const del=el('button','移除');del.onclick=()=>{g.sites.splice(i,1);render()};
+ a.append(el('small',s.approved?'已审核启用':'停用 / 待审核'),rename,up,down,toggle,del);block.append(a)});$('list').append(block)}
+}
+$('file').onchange=async()=>{try{const f=$('file').files[0];if(!f)return;if(f.size>8*1024*1024)throw Error('文件过大');const obj=JSON.parse(await f.text());$('candidates').replaceChildren();
+ if(obj.version===1&&Array.isArray(obj.groups)){if(!obj.groups.every(g=>typeof g.id==='string'&&typeof g.name==='string'&&Array.isArray(g.sites)&&g.sites.every(s=>s&&typeof s.name==='string'&&typeof s.api==='string')))throw Error('目录格式错误');data=obj;render();return}
+ if(!Array.isArray(obj.sites))throw Error('缺少 sites 数组');
+ const eligible=obj.sites.filter(s=>s&&[0,1].includes(s.type)&&typeof s.api==='string'&&validApi(s.api)&&!s.ext&&!s.jar&&!s.spider);
+ $('candidates').append(el('p','候选 '+eligible.length+' / '+obj.sites.length+'。未审核，不会自动发布。'));
+ for(const s of eligible){const a=el('article','');a.append(el('span',String(s.name||s.key||'未命名')));const b=el('button','填入审核表');b.onclick=()=>{$('name').value=String(s.name||s.key||'');$('api').value=s.api;$('type').value=String(s.type);$('auth').value='';$('approved').checked=false};a.append(b);$('candidates').append(a)}
+ }catch(e){$('msg').textContent=String(e)}};
+$('add').onclick=()=>{const name=$('name').value.trim(),api=$('api').value.trim(),authorization=$('auth').value.trim();
+ if(!name||!validApi(api)||!authorization||!$('approved').checked){$('msg').textContent='请填写名称、合规 HTTPS API、授权依据并确认审核。';return}
+ const g=data.groups.find(g=>g.id===$('group').value);if(g.sites.some(s=>s.api===api)){ $('msg').textContent='此仓库已经存在相同 API';return}
+ g.sites.push({key:'s-'+crypto.getRandomValues(new Uint32Array(2)).join('-'),name,api,type:Number($('type').value),approved:true,authorization});$('msg').textContent='已添加，请导出并发布。';$('approved').checked=false;render()};
+$('export').onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)+'\n'],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='catalog.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+render();
+</script></html>

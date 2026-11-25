@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "groups": [
+    {
+      "id": "featured",
+      "name": "Harbor · 精选",
+      "sites": []
+    },
+    {
+      "id": "movies",
+      "name": "Harbor · 电影",
+      "sites": []
+    },
+    {
+      "id": "series",
+      "name": "Harbor · 剧集",
+      "sites": []
+    },
+    {
+      "id": "animation",
+      "name": "Harbor · 动画",
+      "sites": []
+    },
+    {
+      "id": "documentary",
+      "name": "Harbor · 纪录片",
+      "sites": []
+    },
+    {
+      "id": "lab",
+      "name": "Harbor · 实验室",
+      "sites": []
+    }
+  ]
+}

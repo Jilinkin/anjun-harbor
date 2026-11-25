@@ -1,27 +1,25 @@
-# Anjun Harbor
+# Anjun Harbor · 0.2
 
-Personal Resource Index.
+Personal Resource Index / independent VOD configuration builder.
 
-## Usage
+## Local manager
 
-Import the following address into a client that supports the `urls` multi-repository format:
+Download [manager.html](manager.html) and open it locally in a browser. Load [catalog.json](catalog.json) or import a strict JSON configuration as candidates. No imported code is executed. Review individual independent HTTPS type 0/1 APIs, record authorization, name and arrange them, then export catalog.json and replace the file in this repository. Never include private credentials in the public repository.
 
-```
+## Publication
+
+The workflow tests and generates independent `warehouses/*.json` from approved entries only. It includes no live feeds or executable dependencies. The fixed entry remains:
+
 https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/index.json
-```
 
-## Maintenance
+Empty groups are not published. With no approved entries, the existing legacy subscription remains active as a reversible fallback; it may include live TV. `legacy.json` preserves the original entry. Complex type 3/JAR/JS configurations require a future dependency review system and are not imported as independent APIs. API reachability and playback are not established by format validation. This version does not test remote playback or automatically find resources.
 
-- Edit `sources.json` to add, rename, remove or reorder authorized source configurations.
-- `scripts/check.py` validates the list, deduplicates exact URLs, checks reachability and generates `index.json` and `status.json`.
-- The GitHub Actions workflow runs daily at 02:23 UTC (10:23 China time), on relevant changes, or manually.
-- Unreachable or nonstandard sources remain in the index; review status before removing them.
-- The index does not merge source scripts, host videos, or collect separate live-TV feeds. A referenced upstream configuration may still include live TV.
-- HTTP success and a recognizable configuration do not establish playback, security or content authorization. Only use sources you are authorized to access; review third-party executable scripts before use.
-- Do not add credentials or secret URLs to this public repository.
-
-## Manual refresh
+## CLI
 
 ```sh
-python3 scripts/check.py
+python3 -m unittest discover -s scripts -p 'test_*.py'
+python3 scripts/build.py
+python3 scripts/build.py --publish
 ```
+
+Git history preserves prior versions. The daily workflow regenerates the catalog and validates configuration; it retries non-fast-forward push conflicts against the newest main without force-pushing. The old `sources.json` and `scripts/check.py` are retained as V0.1 reference only.
