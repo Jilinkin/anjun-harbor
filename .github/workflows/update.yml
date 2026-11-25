@@ -31,6 +31,8 @@ on:
       - scripts/harbor_engine.py
       - scripts/engine_server.py
       - scripts/test_engine.py
+      - scripts/engine_network.py
+      - scripts/test_engine_network.py
       - open.json
       - open/**
       - smoke.json

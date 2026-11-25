@@ -30,6 +30,8 @@ def main():
     p.add_argument("--host",default="127.0.0.1")
     p.add_argument("--port",type=int,default=8898)
     p.add_argument("--allow-lan",action="store_true")
+    p.add_argument("--providers",type=Path)
+    p.add_argument("--allow-network",action="store_true")
     a=p.parse_args()
     try:
         addr=ipaddress.IPv4Address(a.host)
@@ -38,7 +40,17 @@ def main():
             raise ValueError()
     except ValueError:
         p.error("Specify loopback or explicitly allow a private LAN address")
-    catalog=demo()
+    if a.providers:
+        if not a.allow_network:
+            p.error("--providers requires explicit --allow-network")
+        from engine_network import load_network
+        from audit_dependencies import read_limited
+        catalog,status=load_network(json.loads(read_limited(a.providers).decode("utf-8-sig")))
+        print(json.dumps(status,ensure_ascii=False),flush=True)
+        if not catalog.records:
+            p.error("No valid records from reviewed providers")
+    else:
+        catalog=demo()
     base=f"http://{addr}:{a.port}"
     class Handler(BaseHTTPRequestHandler):
         def do_GET(self):
