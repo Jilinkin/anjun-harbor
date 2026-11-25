@@ -33,7 +33,7 @@ final class HarborRegistry {
             if("cms-network-demo".equals(kind)){
                 require(provider.length()==3&&Boolean.TRUE.equals(provider.opt("allow_network"))&&++networkCount<=1,"Explicit network opt-in required");
             }else{
-                require(("cms-snapshot".equals(kind)||"json-snapshot".equals(kind))&&provider.length()==3&&provider.opt("snapshot") instanceof JSONObject,"Unknown adapter or options");
+                require(("cms-snapshot".equals(kind)||"json-snapshot".equals(kind)||"html-snapshot".equals(kind))&&provider.length()==3&&provider.opt("snapshot") instanceof JSONObject,"Unknown adapter or options");
             }
         }
         for(int i=0;i<providers.length();i++){
@@ -46,6 +46,8 @@ final class HarborRegistry {
             JSONObject data=provider.getJSONObject("snapshot");
             if("json-snapshot".equals(kind)){
                 items=HarborRules.load(data.toString(),reviewed);
+            }else if("html-snapshot".equals(kind)){
+                items=HarborHtml.load(data,reviewed);
             }else if("cms-snapshot".equals(kind)){
                 items=cms(data,reviewed);
             }else throw new IllegalArgumentException("Unknown adapter");
