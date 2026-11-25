@@ -1,0 +1,33 @@
+name: Publish verified RC2 integrity hints
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: android-integrity-rc2
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test integrity generator
+        run: |
+          cd engine/android
+          python3 -m unittest test_integrity_release.py
+      - name: Verify existing published RC2 bytes and create hints
+        run: |
+          python3 engine/android/integrity_release.py --version rc2 --ref abefe13500b01b8a7474ad9d58271c49c9b070cb --expected-sha256 83342383424b33b46bd13af1e58904a82381d71431b08c144b39bf20ddf8db15
+      - name: Publish optional checksum variants only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- android-demo/rc2/md5.txt android-demo/rc2/integrity.json android-demo/rc2/config-md5.json android-demo/rc2/config-cn-md5.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add verified RC2 MD5 compatibility hints'
+          git push origin HEAD:main
