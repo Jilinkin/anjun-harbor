@@ -16,5 +16,5 @@ def main():
     for name,prefix in (("config.json",""),("config-cn.json","https://gh-proxy.com/")):
         config={"spider":prefix+BASE+"/harbor.jar","sites":[{"key":"harbor_rc3","name":"Harbor RC3","type":3,"api":"csp_Harbor","searchable":1,"quickSearch":1,"filterable":0,"ext":"harbor-rc3-demo"}]}
         (DEST/name).write_text(json.dumps(config,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    (DEST/"provenance.json").write_text(json.dumps({"commit":os.environ["GITHUB_SHA"],"run":os.environ["GITHUB_RUN_ID"],"sha256":digest,"status":"device acceptance only","diagnostic_revision":"abefe13500b01b8a7474ad9d58271c49c9b070cb"},indent=2)+"\n")
+    (DEST/"provenance.json").write_text(json.dumps({"commit":"31d2aa3f131049247f6f0dcba94efcbe0496a1ec","run":"45584296019","publish_run":os.environ["GITHUB_RUN_ID"],"sha256":digest,"status":"device acceptance only","diagnostic_revision":"abefe13500b01b8a7474ad9d58271c49c9b070cb"},indent=2)+"\n")
 if __name__=="__main__":main()
