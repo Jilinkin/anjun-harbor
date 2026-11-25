@@ -18,9 +18,14 @@ final class HarborCatalog {
     }
     List<String[]> query(String category,String keyword) {
         ArrayList<String[]> result=new ArrayList<>();
-        String k=keyword.toLowerCase(Locale.ROOT).trim();
-        for(String[] f:films) if((category.isEmpty()||category.equals(f[2]))&&f[1].toLowerCase(Locale.ROOT).contains(k)) result.add(f.clone());
+        String k=java.text.Normalizer.normalize(keyword,java.text.Normalizer.Form.NFKC).toLowerCase(Locale.ROOT).trim().replaceAll("\\s+"," ");
+        for(String[] f:films) if((category.isEmpty()||category.equals(f[2]))&&(f[1].toLowerCase(Locale.ROOT).contains(k)||aliases(f[0]).contains(k))) result.add(f.clone());
         return result;
+    }
+    private static String aliases(String id){
+        if("bunny".equals(id))return "大雄兔 大兔子 大雄兔电影";
+        if("steel".equals(id))return "钢铁之泪 钢铁的眼泪";
+        return "";
     }
     String[] get(String id) {
         for(String[] f:films) if(f[0].equals(id)) return f.clone();

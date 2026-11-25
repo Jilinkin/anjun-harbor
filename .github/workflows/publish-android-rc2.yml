@@ -1,0 +1,51 @@
+name: Build and publish RC2 static demo
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/publish-android-rc2.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: static-rc2
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: JVM regression
+        run: |
+          mvn -q dependency:get -Dartifact=org.json:json:20240303
+          export HARBOR_JSON_JAR="$HOME/.m2/repository/org/json/json/20240303/json-20240303.jar"
+          bash engine/android/test.sh
+      - uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
+          log-accepted-android-sdk-licenses: 'false'
+      - name: Build and verify DEX
+        run: bash engine/android/build.sh
+      - name: Generate original diagnostic MP4 and placeholder covers
+        run: |
+          command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y ffmpeg)
+          cd engine/android/build
+          ffmpeg -hide_banner -loglevel error -f lavfi -i 'testsrc2=size=320x180:rate=24' -f lavfi -i 'sine=frequency=440:sample_rate=44100' -t 5 -c:v libx264 -profile:v baseline -pix_fmt yuv420p -c:a aac -af volume=0.1 -movflags +faststart diagnostic.mp4
+          ffmpeg -hide_banner -loglevel error -f lavfi -i 'color=c=0x2563eb:s=300x420' -frames:v 1 -threads 1 bunny.png
+          ffmpeg -hide_banner -loglevel error -f lavfi -i 'color=c=0x7c3aed:s=300x420' -frames:v 1 -threads 1 steel.png
+          ffprobe -v error -show_entries stream=codec_name -of csv=p=0 diagnostic.mp4
+      - name: Prepare static demo
+        run: python3 engine/android/publish_rc2.py
+      - name: Publish RC2 only
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- android-demo/rc2
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish RC2 original diagnostic demo'
+          git push origin HEAD:main

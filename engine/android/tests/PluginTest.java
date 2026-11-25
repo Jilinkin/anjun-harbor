@@ -19,7 +19,11 @@ public final class PluginTest {
         check(obj(h.searchContent("BUNNY",false)).getJSONArray("list").length()==1,"Search");
         check(obj(h.searchContent("BUNNY",false,"2")).getJSONArray("list").length()==0,"Pagination");
         JSONObject detail=obj(h.detailContent(Arrays.asList("bunny"))).getJSONArray("list").getJSONObject(0);
-        check(detail.getString("vod_play_url").equals("Full$bunny"),"Episode identity");
+        check(detail.getString("vod_play_url").startsWith("Full$bunny$$5秒测试$diag-bunny"),"Episode identity");
+        check(obj(h.searchContent("大雄兔",false)).getJSONArray("list").length()==1,"Chinese alias");
+        check(obj(h.searchContent("ｂｕｎｎｙ",true)).getJSONArray("list").length()==1,"Full width query");
+        check(obj(h.playerContent("诊断短片（非正片）","diag-bunny",Collections.<String>emptyList())).getString("url").endsWith("/diagnostic.mp4"),"Diagnostic URL");
+        check(obj(h.playerContent("Blender 官方备选","official-bunny",Collections.<String>emptyList())).getString("url").startsWith("https://download.blender.org/"),"Official alternate");
         check(detail.getString("vod_content").contains("CC BY 3.0"),"Credit");
         check(obj(h.playerContent("Harbor","bunny",Collections.<String>emptyList())).getString("url").equals(HarborData.FILMS[0][4]),"Known player ID");
         check(obj(h.playerContent("Harbor","https://example.com/x",Collections.<String>emptyList())).getString("url").isEmpty(),"Unknown ID");
@@ -36,6 +40,6 @@ public final class PluginTest {
         check(obj(h.homeContent(false)).getJSONArray("class").length()==0,"Empty categories");
         h.init(null,"");
         check(obj(h.homeContent(false)).getJSONArray("list").length()==2,"Restore");
-        System.out.println("Plugin contract: 17 checks passed");
+        System.out.println("Plugin contract checks passed");
     }
 }
