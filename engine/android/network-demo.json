@@ -1,0 +1,14 @@
+{
+  "list": [
+    {
+      "vod_id": "bunny",
+      "vod_name": "Big Buck Bunny",
+      "vod_play_url": "Full$https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    },
+    {
+      "vod_id": "steel",
+      "vod_name": "Tears of Steel",
+      "vod_play_url": "Full$https://storage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import java.util.HashSet;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-/** Built-in offline adapter registry for the reviewed open-film fixture catalog. */
+/** Built-in snapshot registry with explicit first-party demo network mode. */
 final class HarborRegistry {
     private static void require(boolean ok,String message) {
         if(!ok)throw new IllegalArgumentException(message);
@@ -22,26 +22,41 @@ final class HarborRegistry {
         HashSet<String> seenProviders=new HashSet<>();
         HashSet<String> seenTitles=new HashSet<>();
         ArrayList<String[]> merged=new ArrayList<>();
+        int networkCount=0;
+        // Validate every provider shape before making any network request.
         for(int i=0;i<providers.length();i++){
             JSONObject provider=providers.getJSONObject(i);
-            require(provider.length()==3&&provider.has("id")&&provider.has("kind")&&provider.has("snapshot"),"Unknown provider option");
+            require(provider.has("id")&&provider.has("kind"),"Missing provider identity");
             Object identity=provider.get("id");
             require(identity instanceof String&&((String)identity).matches("[a-z][a-z0-9_-]{0,39}")&&seenProviders.add((String)identity),"Invalid or duplicate provider");
             Object kind=provider.get("kind");
-            JSONObject data=provider.getJSONObject("snapshot");
+            if("cms-network-demo".equals(kind)){
+                require(provider.length()==3&&Boolean.TRUE.equals(provider.opt("allow_network"))&&++networkCount<=1,"Explicit network opt-in required");
+            }else{
+                require(("cms-snapshot".equals(kind)||"json-snapshot".equals(kind))&&provider.length()==3&&provider.opt("snapshot") instanceof JSONObject,"Unknown adapter or options");
+            }
+        }
+        for(int i=0;i<providers.length();i++){
+            JSONObject provider=providers.getJSONObject(i);
+            Object kind=provider.get("kind");
             HarborCatalog items;
+            if("cms-network-demo".equals(kind)){
+                items=cms(HarborNetwork.fetch(),reviewed);
+            }else{
+            JSONObject data=provider.getJSONObject("snapshot");
             if("json-snapshot".equals(kind)){
                 items=HarborRules.load(data.toString(),reviewed);
             }else if("cms-snapshot".equals(kind)){
                 items=cms(data,reviewed);
             }else throw new IllegalArgumentException("Unknown adapter");
+            }
             for(String[] row:items.query("","")){
                 if(seenTitles.add(row[0]))merged.add(row);
             }
         }
         return new HarborCatalog(merged.toArray(new String[0][]));
     }
-    private static HarborCatalog cms(JSONObject data,HarborCatalog reviewed)throws Exception{
+    static HarborCatalog cms(JSONObject data,HarborCatalog reviewed)throws Exception{
         require(data.length()==1&&data.has("list"),"Invalid CMS fixture");
         JSONArray rows=data.getJSONArray("list");
         require(rows.length()<=100,"Row limit");
