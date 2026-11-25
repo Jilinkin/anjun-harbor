@@ -1,0 +1,8 @@
+{
+  "commit": "31d2aa3f131049247f6f0dcba94efcbe0496a1ec",
+  "run": "45584296019",
+  "publish_run": "45585090351",
+  "sha256": "821c607b3bf3a6d9e3960a3c4b39a3b52382b349a9f84b135c4f61e15895ac1a",
+  "status": "device acceptance only",
+  "diagnostic_revision": "abefe13500b01b8a7474ad9d58271c49c9b070cb"
+}
