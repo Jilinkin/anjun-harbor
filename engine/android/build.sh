@@ -11,7 +11,8 @@ mkdir -p build
 rm -rf build/stub build/classes build/dex
 mkdir -p build/stub build/classes build/dex
 javac --release 8 -classpath "$PLATFORM" -d build/stub $(find stub -name "*.java")
-javac --release 8 -classpath "$PLATFORM:build/stub" -d build/classes $(find src -name "*.java")
+python3 generate.py
+javac --release 8 -encoding UTF-8 -classpath "$PLATFORM:build/stub" -d build/classes $(find src build/generated -name "*.java")
 jar cf build/abi.jar -C build/stub .
 jar cf build/jvm.jar -C build/classes .
 "$D8" --min-api 21 --lib "$PLATFORM" --classpath build/abi.jar --output build/dex build/jvm.jar

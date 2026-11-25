@@ -10,7 +10,7 @@ permissions:
   contents: read
 jobs:
   dex:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -18,6 +18,10 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+      - name: JVM catalog tests
+        run: bash engine/android/test.sh
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
       - name: Install Android SDK
         run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
       - name: Build and verify DEX

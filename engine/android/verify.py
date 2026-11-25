@@ -21,7 +21,7 @@ for i in range(class_count):
     idx=u32(class_off+32*i)
     assert idx<type_count
     classes.append(get_string(u32(type_off+4*idx)))
-assert set(classes)=={"Lcom/github/catvod/spider/Harbor;","Lcom/github/catvod/spider/Init;"},classes
+assert set(classes)=={"Lcom/github/catvod/spider/Harbor;","Lcom/github/catvod/spider/Init;","Lcom/github/catvod/spider/HarborCatalog;","Lcom/github/catvod/spider/HarborData;"},classes
 digest=hashlib.sha256(jar.read_bytes()).hexdigest()
 (root/"build"/"sha256.txt").write_text(digest+"  harbor.jar\n")
 print("Verified DEX classes:",classes,"SHA256:",digest)
