@@ -12,6 +12,8 @@ on:
       - scripts/test_build.py
       - scripts/probe.py
       - scripts/test_probe.py
+      - scripts/audit_dependencies.py
+      - scripts/test_audit_dependencies.py
       - .github/workflows/update.yml
 permissions:
   contents: write

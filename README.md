@@ -1,4 +1,4 @@
-# Anjun Harbor · 0.3
+# Anjun Harbor · 0.4
 
 Personal Resource Index / independent VOD configuration builder.
 
@@ -12,7 +12,7 @@ The workflow tests and generates independent `warehouses/*.json` from approved e
 
 https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/index.json
 
-Empty groups are not published. With no approved entries, the existing legacy subscription remains active as a reversible fallback; it may include live TV. `legacy.json` preserves the original entry. Complex type 3/JAR/JS configurations require a future dependency review system and are not imported as independent APIs. API reachability and playback are not established by format validation. This version does not test remote playback or automatically find resources.
+Empty groups are not published. With no approved entries, the existing legacy subscription remains active as a reversible fallback; it may include live TV. `legacy.json` preserves the original entry. Complex type 3/JAR/JS configurations require dependency review and a future controlled publishing system and are not imported as independent APIs. API reachability and playback are not established by format validation. This version does not test remote playback or automatically find resources.
 
 ## CLI
 
@@ -31,3 +31,15 @@ Enable probing explicitly per authorized entry in the manager or set `probe: tru
 Score: HTTP success 20, recognized metadata list 40, nonempty list 20, response speed up to 20. A score measures the observed metadata response only, not content legality, playback, picture quality or stability on the TV. Opt-out and unpublished entries have no score. No automatic deletion or reordering. Tests use mock data, not real providers.
 
 Local optional check: `python3 scripts/probe.py`. Only enable network checks for APIs you have permission to query.
+
+## Static dependency review (0.4)
+
+Use Python 3.9+ locally with a configuration and dependency files you are authorized to inspect. No network access, code execution, extraction, or copying of dependencies is performed.
+
+```sh
+python3 scripts/audit_dependencies.py /path/to/config.json --base-url https://example.com/config.json --output dependency-report.json
+```
+
+The base URL is optional; the report inventories recognized JAR, JS, JSON and other file references, resolves relative paths, detects root escapes, reports missing local files, calculates SHA-256 for small local files, compares a supplied legacy MD5 value, and flags potential same-name conflicts. Remote references are unverified. Dynamic imports, inline or custom schemes and unknown formats are not comprehensively analyzed. A matching hash is not a safety or authorization verdict. Reports are local by default; review them for sensitive paths before sharing. Output must be a new file.
+
+Load dependency-report.json into manager.html to inspect results. Type 3 publication remains disabled; the independent builder still publishes only reviewed type 0/1 entries. No third-party files are added to this repository.
