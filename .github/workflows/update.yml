@@ -26,6 +26,8 @@ on:
       - scripts/test_local_library.py
       - scripts/aggregate.py
       - scripts/test_aggregate.py
+      - scripts/personalize.py
+      - scripts/test_personalize.py
       - open.json
       - open/**
       - smoke.json
