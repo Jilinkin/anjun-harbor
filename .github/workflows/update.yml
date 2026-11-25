@@ -28,6 +28,9 @@ on:
       - scripts/test_aggregate.py
       - scripts/personalize.py
       - scripts/test_personalize.py
+      - scripts/harbor_engine.py
+      - scripts/engine_server.py
+      - scripts/test_engine.py
       - open.json
       - open/**
       - smoke.json
