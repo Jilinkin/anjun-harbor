@@ -27,7 +27,7 @@ public final class Harbor extends Spider {
         return j;
     }
     private JSONObject result(JSONArray rows,int page,int total) throws Exception {
-        return new JSONObject().put("list",rows).put("page",page).put("pagecount",total==0?0:1).put("limit",20).put("total",total);
+        return new JSONObject().put("list",rows).put("page",page).put("pagecount",(total+19)/20).put("limit",20).put("total",total);
     }
     private int page(String p) {
         try{return Math.max(1,Integer.parseInt(p));}catch(NumberFormatException e){return 1;}
@@ -35,14 +35,14 @@ public final class Harbor extends Spider {
     private JSONObject list(String category,String key,int page) throws Exception {
         JSONArray rows=new JSONArray(); int total=0;
         for(String[] f:catalog.query(category,key)){
-            total++; if(page==1) rows.put(row(f,false));
+            total++; if((long)(page-1)*20<total && total<=(long)page*20) rows.put(row(f,false));
         }
         return result(rows,page,total);
     }
     public String homeContent(boolean filter) throws Exception {
         JSONArray c=new JSONArray();
-        c.put(new JSONObject().put("type_id","animation").put("type_name","Animation"));
-        c.put(new JSONObject().put("type_id","scifi").put("type_name","Sci-Fi"));
+        if(!catalog.query("animation","").isEmpty()) c.put(new JSONObject().put("type_id","animation").put("type_name","Animation"));
+        if(!catalog.query("scifi","").isEmpty()) c.put(new JSONObject().put("type_id","scifi").put("type_name","Sci-Fi"));
         return list("","",1).put("class",c).toString();
     }
     public String homeVideoContent() throws Exception {return list("","",1).toString();}
