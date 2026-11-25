@@ -42,3 +42,15 @@ jobs:
             engine/android/build/harbor.jar
             engine/android/build/sha256.txt
           if-no-files-found: error
+      - name: Assemble flat acceptance bundle
+        run: |
+          mkdir -p engine/android/build/acceptance
+          cp engine/android/build/harbor.jar engine/android/build/sha256.txt engine/android/serve_test.py engine/android/ACCEPTANCE-QUICKSTART.md engine/android/ACCEPTANCE.md engine/android/build/acceptance/
+          cd engine/android/build/acceptance
+          sha256sum -c sha256.txt
+          python3 serve_test.py --help
+      - uses: actions/upload-artifact@v4
+        with:
+          name: harbor-android-acceptance
+          path: engine/android/build/acceptance/
+          if-no-files-found: error
