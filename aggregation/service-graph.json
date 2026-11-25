@@ -6,19 +6,19 @@
     {
       "warehouse": "Harbor 01",
       "total": 151,
-      "direct_api": 0,
+      "direct_api": 20,
       "relative_or_script_ref": 35,
       "crawler_class": 96,
-      "other": 20,
+      "other": 0,
       "explicit_ext_url": 1
     },
     {
       "warehouse": "Harbor 02",
       "total": 48,
-      "direct_api": 0,
+      "direct_api": 1,
       "relative_or_script_ref": 8,
       "crawler_class": 39,
-      "other": 1,
+      "other": 0,
       "explicit_ext_url": 3
     },
     {
@@ -33,30 +33,319 @@
     {
       "warehouse": "Harbor 04",
       "total": 165,
-      "direct_api": 0,
+      "direct_api": 5,
       "relative_or_script_ref": 130,
       "crawler_class": 30,
-      "other": 5,
+      "other": 0,
       "explicit_ext_url": 29
     },
     {
       "warehouse": "Harbor 05",
       "total": 93,
-      "direct_api": 0,
+      "direct_api": 4,
       "relative_or_script_ref": 11,
       "crawler_class": 78,
-      "other": 4,
+      "other": 0,
       "explicit_ext_url": 9
     }
   ],
   "total": 755,
-  "distinct_direct_api_hosts": 0,
-  "cross_warehouse_direct_api_host_groups": 0,
-  "distinct_direct_api_identities": 0,
-  "exact_api_repeat_groups": 0,
+  "distinct_direct_api_hosts": 28,
+  "cross_warehouse_direct_api_host_groups": 2,
+  "distinct_direct_api_identities": 29,
+  "exact_api_repeat_groups": 1,
   "distinct_crawler_class_labels": 119,
   "cross_warehouse_crawler_class_groups": 18,
-  "host_groups": [],
+  "host_groups": [
+    {
+      "id": "host-001",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 58
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 38
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "host-002",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 59
+        },
+        {
+          "warehouse": "Harbor 05",
+          "position": 39
+        }
+      ],
+      "warehouse_count": 2
+    },
+    {
+      "id": "host-003",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 60
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-004",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 61
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-005",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 62
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-006",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 63
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-007",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 64
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-008",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 65
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-009",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 66
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-010",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 67
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-011",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 68
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-012",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 69
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-013",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 70
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-014",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 71
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-015",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 72
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-016",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 73
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-017",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 74
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-018",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 75
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-019",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 76
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-020",
+      "members": [
+        {
+          "warehouse": "Harbor 01",
+          "position": 77
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-021",
+      "members": [
+        {
+          "warehouse": "Harbor 02",
+          "position": 44
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-022",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 56
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-023",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 93
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-024",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 96
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-025",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 110
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-026",
+      "members": [
+        {
+          "warehouse": "Harbor 04",
+          "position": 132
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-027",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 36
+        }
+      ],
+      "warehouse_count": 1
+    },
+    {
+      "id": "host-028",
+      "members": [
+        {
+          "warehouse": "Harbor 05",
+          "position": 37
+        }
+      ],
+      "warehouse_count": 1
+    }
+  ],
   "crawler_class_groups": [
     {
       "id": "class-001",
@@ -2029,7 +2318,18 @@
       "warehouse_count": 1
     }
   ],
-  "exact_api_repeat_members": [],
+  "exact_api_repeat_members": [
+    [
+      {
+        "warehouse": "Harbor 01",
+        "position": 58
+      },
+      {
+        "warehouse": "Harbor 05",
+        "position": 38
+      }
+    ]
+  ],
   "entries": [
     {
       "warehouse": "Harbor 01",
@@ -2319,102 +2619,102 @@
     {
       "warehouse": "Harbor 01",
       "position": 58,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 59,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 60,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 61,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 62,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 63,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 64,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 65,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 66,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 67,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 68,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 69,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 70,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 71,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 72,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 73,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 74,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 75,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 76,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
       "position": 77,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 01",
@@ -3004,7 +3304,7 @@
     {
       "warehouse": "Harbor 02",
       "position": 44,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 02",
@@ -4794,7 +5094,7 @@
     {
       "warehouse": "Harbor 04",
       "position": 56,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 04",
@@ -4979,7 +5279,7 @@
     {
       "warehouse": "Harbor 04",
       "position": 93,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 04",
@@ -4994,7 +5294,7 @@
     {
       "warehouse": "Harbor 04",
       "position": 96,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 04",
@@ -5064,7 +5364,7 @@
     {
       "warehouse": "Harbor 04",
       "position": 110,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 04",
@@ -5174,7 +5474,7 @@
     {
       "warehouse": "Harbor 04",
       "position": 132,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 04",
@@ -5519,22 +5819,22 @@
     {
       "warehouse": "Harbor 05",
       "position": 36,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 05",
       "position": 37,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 05",
       "position": 38,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 05",
       "position": 39,
-      "kind": "other"
+      "kind": "direct_api"
     },
     {
       "warehouse": "Harbor 05",
