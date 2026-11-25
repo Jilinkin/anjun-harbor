@@ -1,0 +1,15 @@
+{
+  "spider": "https://raw.githubusercontent.com/Jilinkin/anjun-harbor/1917397ed649cd88db939a7ca6d7484f973d4294/android-demo/rc3/harbor.jar;md5;b145cffe73183bb3e3d7e8e50f4c61fb",
+  "sites": [
+    {
+      "key": "harbor_rc3",
+      "name": "Harbor RC3",
+      "type": 3,
+      "api": "csp_Harbor",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "harbor-rc3-demo"
+    }
+  ]
+}
