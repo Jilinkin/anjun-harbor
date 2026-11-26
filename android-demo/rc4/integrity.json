@@ -1,0 +1,7 @@
+{
+  "sha256": "e21c80ce3a5e6997bdf3eb179491dddd850bb3495c28810fb18be95c7e430b01",
+  "md5": "b8b115dc94975c7637aab30ddb049761",
+  "jar_revision": "2b7a275f0d4065dcab9ba8c93b1e9f2432c831dc",
+  "md5_role": "TVBox compatibility hint; verification depends on client",
+  "security": "Not a signature; proxy can modify configuration and JAR"
+}
