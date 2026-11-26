@@ -24,9 +24,9 @@ def generate(jar,expected_sha,version,ref):
         out[name]=encode({"spider":prefix+base+";md5;"+md5,"sites":[{
             "key":"harbor_"+version,"name":"Harbor "+version.upper(),"type":3,
             "api":"csp_Harbor","searchable":1,"quickSearch":1,"filterable":0}]})
-    if version=="rc3":
+    if version in ("rc3","rc4"):
         for name in ("config-md5.json","config-cn-md5.json"):
-            cfg=json.loads(out[name]);cfg["sites"][0]["ext"]="harbor-rc3-demo";out[name]=encode(cfg)
+            cfg=json.loads(out[name]);cfg["sites"][0]["ext"]=f"harbor-{version}-demo";out[name]=encode(cfg)
     return out
 
 def main():

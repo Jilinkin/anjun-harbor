@@ -15,11 +15,20 @@ public final class Harbor extends Spider {
         HarborData.FILMS[0],HarborData.FILMS[1],
         {"diagnostic","Harbor 播放测试","diagnostic","2026",STATIC+"diagnostic.mp4","Harbor 原创五秒测试画面和提示音，非正片。"}
     });
+    private static String[] withSource(String[] film,String url,String note){
+        String[] copy=film.clone();copy[4]=url;copy[5]+=" | "+note;return copy;
+    }
+    private static final HarborCatalog RC4=new HarborCatalog(new String[][]{
+        withSource(HarborData.FILMS[0],"https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_h264.mov","Blender 官方 480p 候选，国内播放待验。"),
+        withSource(HarborData.FILMS[1],"https://mirrors.aliyun.com/blender/demo/movies/ToS/tears_of_steel_720p.mov","阿里云 Blender 镜像 720p 候选，国内播放待验。"),
+        DEMO.get("diagnostic")
+    });
     private static final HarborLoadResult DEFAULT=new HarborLoadResult(CATALOG,"[]");
     private volatile HarborLoadResult state=DEFAULT;
     public synchronized void init(Context c) {state=DEFAULT;}
     public synchronized void init(Context c,String ext) throws Exception {
         if(ext==null||ext.trim().isEmpty()){state=DEFAULT;return;}
+        if("harbor-rc4-demo".equals(ext)){state=new HarborLoadResult(RC4,"[]");return;}
         if("harbor-rc3-demo".equals(ext)){state=new HarborLoadResult(DEMO,"[]");return;}
         // Never briefly expose the default or previous catalog on invalid input.
         state=new HarborLoadResult(new HarborCatalog(new String[0][]),"[]");

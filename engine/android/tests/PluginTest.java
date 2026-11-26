@@ -50,6 +50,16 @@ public final class PluginTest {
         check(obj(h.playerContent("Harbor","diagnostic",Collections.<String>emptyList())).getString("url").endsWith("/diagnostic.mp4"),"Original diagnostic media");
         h.init(null,"");
         check(obj(h.homeContent(false)).getJSONArray("list").length()==2,"Reset diagnostic");
+        h.init(null,"harbor-rc4-demo");
+        check(obj(h.homeContent(false)).getJSONArray("list").length()==3,"RC4 home");
+        check(obj(h.searchContent("bunny",false)).getJSONArray("list").length()==1,"RC4 search");
+        check(obj(h.searchContent("钢铁之泪",true)).getJSONArray("list").length()==1,"RC4 Chinese search");
+        check(obj(h.detailContent(Arrays.asList("steel"))).getJSONArray("list").getJSONObject(0).getString("vod_play_url").equals("Full$steel"),"RC4 simple detail");
+        check(obj(h.playerContent("Harbor","bunny",Collections.<String>emptyList())).getString("url").equals("https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_h264.mov"),"RC4 Bunny");
+        check(obj(h.playerContent("Harbor","steel",Collections.<String>emptyList())).getString("url").equals("https://mirrors.aliyun.com/blender/demo/movies/ToS/tears_of_steel_720p.mov"),"RC4 Steel");
+        check(obj(h.playerContent("Harbor","diagnostic",Collections.<String>emptyList())).getString("url").endsWith("/diagnostic.mp4"),"RC4 diagnostic preserved");
+        h.init(null,"");
+        check(obj(h.playerContent("Harbor","bunny",Collections.<String>emptyList())).getString("url").equals(HarborData.FILMS[0][4]),"Legacy source unchanged");
         System.out.println("Plugin contract checks passed");
     }
 }
