@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-26T00:55:26.569993+00:00",
+  "scope": "CI runner only; not mainland China or playback verification",
+  "sources": [
+    {
+      "id": "bunny",
+      "url": "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_h264.mov",
+      "status": "http_error",
+      "http": 404
+    },
+    {
+      "id": "steel",
+      "url": "https://mirrors.aliyun.com/blender/demo/movies/ToS/tears_of_steel_720p.mov",
+      "status": "range_observed",
+      "http": 206,
+      "content_type": "video/quicktime",
+      "content_range": "bytes 0-63/372178639"
+    }
+  ]
+}

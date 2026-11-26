@@ -1,0 +1,15 @@
+{
+  "spider": "https://gh-proxy.com/https://raw.githubusercontent.com/Jilinkin/anjun-harbor/main/android-demo/rc4/harbor.jar",
+  "sites": [
+    {
+      "key": "harbor_rc4",
+      "name": "Harbor RC4",
+      "type": 3,
+      "api": "csp_Harbor",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0,
+      "ext": "harbor-rc4-demo"
+    }
+  ]
+}
